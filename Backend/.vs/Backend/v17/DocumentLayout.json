@@ -1,109 +1,109 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\code\\zadanie rekrutacyjne\\Backend\\",
+  "WorkspaceRootPath": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\services\\impl\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\impl\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\services\\impl\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\impl\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\database\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:database\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\mapper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:mapper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\services\\impl\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\impl\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\services\\impl\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\impl\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\database\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:database\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\mapper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:mapper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\responses\\bookresponses\\bookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\models\\responses\\bookresponses\\bookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\responses\\bookresponses\\bookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\responses\\bookresponses\\simplebookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\models\\responses\\bookresponses\\simplebookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\responses\\bookresponses\\simplebookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\services\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\services\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\services\\iclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\services\\iclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\iclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\requests\\bookrequests\\bookupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\models\\requests\\bookrequests\\bookupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\requests\\bookrequests\\bookupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\responses\\clientresponses\\clientresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\models\\responses\\clientresponses\\clientresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\responses\\clientresponses\\clientresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\requests\\bookrequests\\bookcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\models\\requests\\bookrequests\\bookcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\requests\\bookrequests\\bookcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\requests\\clientrequests\\clientcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\models\\requests\\clientrequests\\clientcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\requests\\clientrequests\\clientcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\database\\migrations\\20250731132508_update0003.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\database\\migrations\\20250731132508_update0003.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:database\\migrations\\20250731132508_update0003.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\database\\migrations\\20250730192500_update0002.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\database\\migrations\\20250730192500_update0002.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:database\\migrations\\20250730192500_update0002.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\database\\migrations\\20250730192047_update0001.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\database\\migrations\\20250730192047_update0001.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:database\\migrations\\20250730192047_update0001.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\models\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\responses\\clientresponses\\simpleclientresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\models\\responses\\clientresponses\\simpleclientresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\responses\\clientresponses\\simpleclientresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|c:\\users\\kacper\\desktop\\code\\rekrutacja\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -114,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -122,104 +122,86 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ClientService.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\ClientService.cs",
-              "RelativeDocumentMoniker": "Services\\Impl\\ClientService.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\ClientService.cs",
-              "RelativeToolTip": "Services\\Impl\\ClientService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T17:09:02.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MappingProfiles.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Mapper\\MappingProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Mapper\\MappingProfiles.cs",
               "RelativeDocumentMoniker": "Mapper\\MappingProfiles.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Mapper\\MappingProfiles.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Mapper\\MappingProfiles.cs",
               "RelativeToolTip": "Mapper\\MappingProfiles.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T16:46:02.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T16:46:02.178Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ClientsController.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\ClientsController.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Controllers\\ClientsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ClientsController.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\ClientsController.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Controllers\\ClientsController.cs",
               "RelativeToolTip": "Controllers\\ClientsController.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T16:45:12.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T16:45:12.923Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "BookResponseDto.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\BookResponses\\BookResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Responses\\BookResponses\\BookResponseDto.cs",
               "RelativeDocumentMoniker": "Models\\Responses\\BookResponses\\BookResponseDto.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\BookResponses\\BookResponseDto.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Responses\\BookResponses\\BookResponseDto.cs",
               "RelativeToolTip": "Models\\Responses\\BookResponses\\BookResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T15:02:04.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T15:02:04.893Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "BookService.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\BookService.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Services\\Impl\\BookService.cs",
               "RelativeDocumentMoniker": "Services\\Impl\\BookService.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\BookService.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Services\\Impl\\BookService.cs",
               "RelativeToolTip": "Services\\Impl\\BookService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T17:24:17.062Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "BooksController.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\BooksController.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Controllers\\BooksController.cs",
               "RelativeDocumentMoniker": "Controllers\\BooksController.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\BooksController.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Controllers\\BooksController.cs",
               "RelativeToolTip": "Controllers\\BooksController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T17:40:04.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T17:40:04.786Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "ExceptionHandlingMiddleware.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Middleware\\ExceptionHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "Middleware\\ExceptionHandlingMiddleware.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Middleware\\ExceptionHandlingMiddleware.cs",
               "RelativeToolTip": "Middleware\\ExceptionHandlingMiddleware.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAuwB0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T16:17:45.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T16:17:45.665Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Program.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA4AAAAAAAAAA==",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABUAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T19:13:07.559Z",
               "EditorCaption": ""
@@ -227,231 +209,226 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ClientService.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Services\\Impl\\ClientService.cs",
+              "RelativeDocumentMoniker": "Services\\Impl\\ClientService.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Services\\Impl\\ClientService.cs",
+              "RelativeToolTip": "Services\\Impl\\ClientService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T17:09:02.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Database\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Database\\AppDbContext.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Database\\AppDbContext.cs",
               "RelativeToolTip": "Database\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T11:08:03.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T11:08:03.116Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "BadRequestException.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Exceptions\\BadRequestException.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Exceptions\\BadRequestException.cs",
               "RelativeDocumentMoniker": "Exceptions\\BadRequestException.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Exceptions\\BadRequestException.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Exceptions\\BadRequestException.cs",
               "RelativeToolTip": "Exceptions\\BadRequestException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T16:20:02.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T16:20:02.715Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Book.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Book.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Entities\\Book.cs",
               "RelativeDocumentMoniker": "Models\\Entities\\Book.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Book.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Entities\\Book.cs",
               "RelativeToolTip": "Models\\Entities\\Book.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T13:22:51.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T13:22:51.141Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "SimpleBookResponseDto.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\BookResponses\\SimpleBookResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Responses\\BookResponses\\SimpleBookResponseDto.cs",
               "RelativeDocumentMoniker": "Models\\Responses\\BookResponses\\SimpleBookResponseDto.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\BookResponses\\SimpleBookResponseDto.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Responses\\BookResponses\\SimpleBookResponseDto.cs",
               "RelativeToolTip": "Models\\Responses\\BookResponses\\SimpleBookResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T15:02:12.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T15:02:12.335Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "NotFoundException.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Exceptions\\NotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Exceptions\\NotFoundException.cs",
               "RelativeDocumentMoniker": "Exceptions\\NotFoundException.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Exceptions\\NotFoundException.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Exceptions\\NotFoundException.cs",
               "RelativeToolTip": "Exceptions\\NotFoundException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T16:20:09.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T16:20:09.312Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "IBookService.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\IBookService.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Services\\IBookService.cs",
               "RelativeDocumentMoniker": "Services\\IBookService.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\IBookService.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Services\\IBookService.cs",
               "RelativeToolTip": "Services\\IBookService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T17:22:07.795Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T17:22:07.795Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "IClientService.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\IClientService.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Services\\IClientService.cs",
               "RelativeDocumentMoniker": "Services\\IClientService.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\IClientService.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Services\\IClientService.cs",
               "RelativeToolTip": "Services\\IClientService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T14:10:35.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T14:10:35.44Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "BookUpdateDto.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\BookRequests\\BookUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Requests\\BookRequests\\BookUpdateDto.cs",
               "RelativeDocumentMoniker": "Models\\Requests\\BookRequests\\BookUpdateDto.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\BookRequests\\BookUpdateDto.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Requests\\BookRequests\\BookUpdateDto.cs",
               "RelativeToolTip": "Models\\Requests\\BookRequests\\BookUpdateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T14:47:58.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T14:47:58.391Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Properties\\launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Properties\\launchSettings.json",
               "RelativeToolTip": "Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-30T13:04:25.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T13:04:25.262Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "ClientResponseDto.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\ClientResponses\\ClientResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Responses\\ClientResponses\\ClientResponseDto.cs",
               "RelativeDocumentMoniker": "Models\\Responses\\ClientResponses\\ClientResponseDto.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\ClientResponses\\ClientResponseDto.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Responses\\ClientResponses\\ClientResponseDto.cs",
               "RelativeToolTip": "Models\\Responses\\ClientResponses\\ClientResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T13:44:52.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T13:44:52.935Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "BookCreateDto.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\BookRequests\\BookCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Requests\\BookRequests\\BookCreateDto.cs",
               "RelativeDocumentMoniker": "Models\\Requests\\BookRequests\\BookCreateDto.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\BookRequests\\BookCreateDto.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Requests\\BookRequests\\BookCreateDto.cs",
               "RelativeToolTip": "Models\\Requests\\BookRequests\\BookCreateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T16:39:42.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T16:39:42.158Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "20250731132508_update0003.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\Migrations\\20250731132508_update0003.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Database\\Migrations\\20250731132508_update0003.cs",
               "RelativeDocumentMoniker": "Database\\Migrations\\20250731132508_update0003.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\Migrations\\20250731132508_update0003.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Database\\Migrations\\20250731132508_update0003.cs",
               "RelativeToolTip": "Database\\Migrations\\20250731132508_update0003.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T13:25:35.993Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T13:25:35.993Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
               "Title": "20250730192500_update0002.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\Migrations\\20250730192500_update0002.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Database\\Migrations\\20250730192500_update0002.cs",
               "RelativeDocumentMoniker": "Database\\Migrations\\20250730192500_update0002.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\Migrations\\20250730192500_update0002.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Database\\Migrations\\20250730192500_update0002.cs",
               "RelativeToolTip": "Database\\Migrations\\20250730192500_update0002.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T13:24:58.928Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T13:24:58.928Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "20250730192047_update0001.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\Migrations\\20250730192047_update0001.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Database\\Migrations\\20250730192047_update0001.cs",
               "RelativeDocumentMoniker": "Database\\Migrations\\20250730192047_update0001.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\Migrations\\20250730192047_update0001.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Database\\Migrations\\20250730192047_update0001.cs",
               "RelativeToolTip": "Database\\Migrations\\20250730192047_update0001.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T13:24:54.71Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T13:24:54.71Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
               "Title": "Client.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Client.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Entities\\Client.cs",
               "RelativeDocumentMoniker": "Models\\Entities\\Client.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Client.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Entities\\Client.cs",
               "RelativeToolTip": "Models\\Entities\\Client.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T13:22:55.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T13:22:55.794Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "ClientCreateDto.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\ClientRequests\\ClientCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Requests\\ClientRequests\\ClientCreateDto.cs",
               "RelativeDocumentMoniker": "Models\\Requests\\ClientRequests\\ClientCreateDto.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\ClientRequests\\ClientCreateDto.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Requests\\ClientRequests\\ClientCreateDto.cs",
               "RelativeToolTip": "Models\\Requests\\ClientRequests\\ClientCreateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T12:57:39.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T12:57:39.237Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
               "Title": "SimpleClientResponseDto.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\ClientResponses\\SimpleClientResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Responses\\ClientResponses\\SimpleClientResponseDto.cs",
               "RelativeDocumentMoniker": "Models\\Responses\\ClientResponses\\SimpleClientResponseDto.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\ClientResponses\\SimpleClientResponseDto.cs",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Models\\Responses\\ClientResponses\\SimpleClientResponseDto.cs",
               "RelativeToolTip": "Models\\Responses\\ClientResponses\\SimpleClientResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T12:35:34.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T12:35:34.088Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\appsettings.json",
+              "ToolTip": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",

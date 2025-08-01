@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\zadanie rekrutacyjne\\Backend\\Backend.csproj": {}
+    "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "D:\\code\\zadanie rekrutacyjne\\Backend\\Backend.csproj": {
+    "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\zadanie rekrutacyjne\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "D:\\code\\zadanie rekrutacyjne\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\kacpe\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\zadanie rekrutacyjne\\Backend\\obj\\",
+        "projectPath": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\Kacper\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kacper\\Desktop\\code\\rekrutacja\\Backend\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\kacpe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Kacper\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,8 +39,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -92,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
