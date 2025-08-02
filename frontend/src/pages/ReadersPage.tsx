@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import type { ReaderDto } from "../models/ReaderDto";
 import { getAllReaders } from "../api/readerService";
 import { IoMdPersonAdd } from "react-icons/io";
+import { Modal } from "../components/modals/Modal";
+import { ReaderForm } from "../components/modals/ReaderForm";
+import { ReaderItem } from "../components/ui/ReaderItem";
 
 export const ReadersPage = () => {
   const[readers, setReaders] = useState<ReaderDto[]>([]);
@@ -43,9 +46,7 @@ export const ReadersPage = () => {
           readers.length > 0 ? (
             <ul className="space-y-2">
               {readers.map((reader) => (
-                <li key={reader.id} className="p-3 bg-gray-100 rounded shadow-sm">
-                  {reader.name}
-                </li>
+                <ReaderItem key={reader.id} reader={reader}/>
               ))}
             </ul>
           ) : (
@@ -53,6 +54,10 @@ export const ReadersPage = () => {
           )
         )}
       </div>
+
+      <Modal isOpen={isOpen} onClose={handleOpen}>
+        <ReaderForm onClose={handleOpen} onReaderCreated={fetchReaders} />
+      </Modal>
     </section>
   )
 }
