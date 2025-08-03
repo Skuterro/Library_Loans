@@ -4,8 +4,8 @@ export const HomePage = () => {
   return (
     <>
       <Navbar/>
-      <div className="">
-        <p>test</p>
+      <div className="text-white">
+        <p className="text-white">test</p>
       </div>
     </>
   )

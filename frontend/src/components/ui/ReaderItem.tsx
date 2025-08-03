@@ -1,4 +1,4 @@
-import type { ReaderDto } from "../../models/ReaderDto";
+import type { ReaderDto } from "../../models/reader/ReaderDto";
 import { FaEdit, FaTrashAlt , FaUserCircle } from "react-icons/fa";
 
 interface ReaderItemProps {
@@ -13,12 +13,12 @@ export const ReaderItem = ({ reader, onDelete, onEdit }: ReaderItemProps) => {
       key={reader.id}
       className="group p-4 bg-gray-800 border-blue-300 border-2 rounded shadow-sm flex items-center gap-4 transition duration-300 ease-in-out hover:scale-105"
     >
-      <FaUserCircle className="text-6xl text-gray-400" />
+      <FaUserCircle className="text-6xl text-gray-300" />
       <div className="flex-1">
         <p className="font-bold text-lg text-white">
           {reader.name} {reader.lastName}
         </p>
-        <p className="text-sm text-gray-400">{reader.email}</p>
+        <p className="text-sm text-gray-300">{reader.email}</p>
       </div>
       <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <button className="text-blue-500 hover:text-blue-700" onClick={() => onEdit(reader)}>

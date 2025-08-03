@@ -1,4 +1,3 @@
-
 interface DeleteModalProps {
   onClose: () => void;
   onConfirm: () => void;

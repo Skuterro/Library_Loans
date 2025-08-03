@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import type { ReaderDto } from "../models/ReaderDto";
+import type { ReaderDto } from "../models/reader/ReaderDto";
 import { deleteReader, getAllReaders } from "../api/readerService";
 import { IoMdPersonAdd } from "react-icons/io";
 import { Modal } from "../components/modals/Modal";
-import { ReaderForm } from "../components/modals/ReaderForm";
+import { ReaderForm } from "../components/forms/ReaderForm";
 import { ReaderItem } from "../components/ui/ReaderItem";
 import { DeleteModal } from "../components/modals/DeleteModal";
 import toast from "react-hot-toast";
@@ -11,18 +11,18 @@ import toast from "react-hot-toast";
 export const ReadersPage = () => {
   const[readers, setReaders] = useState<ReaderDto[]>([]);
   const[isLoading, setIsLoading] = useState(true);
-  const[isCreareModalOpen, setIsCreateModalOpen] = useState(false);
+  const[isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const[isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const[readerToDelete, setReaderToDelete] = useState<number | null>(null);
-  const[readerToEdit, setReaderToEdit] = useState<ReaderDto | null>(null);
+  const[readerToUpdate, setReaderToUpdate] = useState<ReaderDto | null>(null);
 
   const handleOpenForm = (reader?: ReaderDto) => {
-    setReaderToEdit(reader || null);
+    setReaderToUpdate(reader || null);
     setIsCreateModalOpen(true);
   }
   
   const handleCloseForm = () => {
-    setReaderToEdit(null);
+    setReaderToUpdate(null);
     setIsCreateModalOpen(false);
   }
 
@@ -43,7 +43,7 @@ export const ReadersPage = () => {
     }
   };
 
-  const handleDelete = async() => {{
+  const handleDelete = async() => {
     if(!readerToDelete){
       return;
     }
@@ -55,7 +55,7 @@ export const ReadersPage = () => {
     }finally{
       handleDeleteModalOpen();
     }
-  }}
+  }
 
   useEffect(() => {
     fetchReaders();
@@ -71,7 +71,6 @@ export const ReadersPage = () => {
           Create
           <IoMdPersonAdd className="text-2xl" />
         </button>
-        
       </div>
       <div className="flex justify-center mt-12">
         {isLoading ? (
@@ -94,11 +93,11 @@ export const ReadersPage = () => {
         )}
       </div>
 
-      <Modal isOpen={isCreareModalOpen} onClose={handleCloseForm}>
+      <Modal isOpen={isCreateModalOpen} onClose={handleCloseForm}>
         <ReaderForm 
           onClose={handleCloseForm} 
           onReaderSaved={fetchReaders} 
-          readerToEdit={readerToEdit}/>
+          readerToUpdate={readerToUpdate}/>
       </Modal>
       
       <Modal isOpen={isDeleteModalOpen} onClose={handleDeleteModalOpen}>

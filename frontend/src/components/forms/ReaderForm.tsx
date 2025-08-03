@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import { createReader, updateReader } from "../../api/readerService";
-import type { ReaderCreateDto } from "../../models/ReaderCreateDto";
+import type { ReaderCreateDto } from "../../models/reader/ReaderCreateDto";
 import { toast } from "react-hot-toast";
-import type { ReaderDto } from "../../models/ReaderDto";
+import type { ReaderDto } from "../../models/reader/ReaderDto";
 
 type ReaderFormProps = {
   onClose: () => void;
   onReaderSaved: () => void;
-  readerToEdit?: ReaderDto | null;
+  readerToUpdate?: ReaderDto | null;
 };
 
-export const ReaderForm = ({ onClose, onReaderSaved, readerToEdit }: ReaderFormProps) => {
+export const ReaderForm = ({ onClose, onReaderSaved, readerToUpdate }: ReaderFormProps) => {
   const [formData, setFormData] = useState<ReaderCreateDto>({
     name: "",
     lastName: "",
@@ -36,8 +36,8 @@ export const ReaderForm = ({ onClose, onReaderSaved, readerToEdit }: ReaderFormP
 
     setIsSubmitting(true);
     try {
-      if (readerToEdit) {
-        await updateReader(readerToEdit.id, formData);
+      if (readerToUpdate) {
+        await updateReader(readerToUpdate.id, formData);
         toast.success("Reader successfully updated!");
       } else {
         await createReader(formData);
@@ -57,11 +57,11 @@ export const ReaderForm = ({ onClose, onReaderSaved, readerToEdit }: ReaderFormP
   };
 
   useEffect(() => {
-    if (readerToEdit) {
+    if (readerToUpdate) {
       setFormData({
-        name: readerToEdit.name,
-        lastName: readerToEdit.lastName,
-        email: readerToEdit.email,
+        name: readerToUpdate.name,
+        lastName: readerToUpdate.lastName,
+        email: readerToUpdate.email,
       });
     } else {
       setFormData({
@@ -70,44 +70,44 @@ export const ReaderForm = ({ onClose, onReaderSaved, readerToEdit }: ReaderFormP
         email: "",
       });
     }
-}, [readerToEdit]);
+}, [readerToUpdate]);
 
   return (
    <form onSubmit={handleSubmit} className="space-y-4">
       <h2 className="text-2xl font-bold mb-4">
-        {readerToEdit ? `Update ${readerToEdit.name} ${readerToEdit.lastName} ` : 'Create new reader'}
+        {readerToUpdate ? `Update ${readerToUpdate.name} ${readerToUpdate.lastName} ` : 'Create new reader'}
       </h2>
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+        <label htmlFor="name" className="block text-sm font-medium">Name</label>
           <input
             type="text"
             name="name"
             id="name"
             value={formData.name}
             onChange={handleChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-lg focus:border-blue-500 focus:ring-blue-500"
           />
       </div>
       <div>
-        <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">Last Name</label>
+        <label htmlFor="lastName" className="block text-sm font-medium">Last Name</label>
           <input
             type="text"
             name="lastName"
             id="lastName"
             value={formData.lastName}
             onChange={handleChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-lg focus:border-blue-500 focus:ring-blue-500"
             />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+          <label htmlFor="email" className="block text-sm font-medium">Email</label>
             <input
               type="email"
               name="email"
               id="email"
               value={formData.email}
                onChange={handleChange}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-lg focus:border-blue-500 focus:ring-blue-500"
             />
         </div>
         <div className="flex justify-end gap-2 mt-6">

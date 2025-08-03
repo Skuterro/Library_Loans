@@ -1,4 +1,4 @@
-import type { SimpleReaderDto } from "./SimpleReaderDto";
+import type { SimpleReaderDto } from "../reader/SimpleReaderDto";
 
 export interface BookDto {
     id: number;

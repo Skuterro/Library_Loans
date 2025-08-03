@@ -1,6 +1,6 @@
 import axiosClient from "./axiosClient";
-import type { ReaderCreateDto } from "../models/ReaderCreateDto"
-import type { ReaderDto } from "../models/ReaderDto";
+import type { ReaderCreateDto } from "../models/reader/ReaderCreateDto"
+import type { ReaderDto } from "../models/reader/ReaderDto";
 
 export const getAllReaders = async (): Promise<ReaderDto[]> => {
   const response = await axiosClient.get('/Clients');
