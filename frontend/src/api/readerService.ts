@@ -12,6 +12,11 @@ export const createReader = async(readerData: ReaderCreateDto) : Promise<ReaderD
   return response.data;
 }
 
+export const updateReader = async(id:number, readerData: ReaderCreateDto) : Promise<ReaderDto> => {
+  const response = await axiosClient.put(`/Clients/${id}`, readerData);
+  return response.data;
+}
+
 export const deleteReader = async(id: number): Promise<void> => {
   await axiosClient.delete(`/Clients/${id}`);
 };

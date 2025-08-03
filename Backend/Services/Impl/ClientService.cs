@@ -42,7 +42,7 @@ namespace Backend.Services.Impl
             bool emailExists = await _context.Clients.AnyAsync(c => c.Email == clientDto.Email);
             if (emailExists)
             {
-                throw new BadRequestException("The email is already in use.");
+                throw new BadRequestException("This email is already in use.");
             }
 
             var clientEntity = _mapper.Map<Client>(clientDto);

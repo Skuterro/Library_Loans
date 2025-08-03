@@ -1,17 +1,37 @@
 import { useEffect, useState } from "react";
 import type { ReaderDto } from "../models/ReaderDto";
-import { getAllReaders } from "../api/readerService";
+import { deleteReader, getAllReaders } from "../api/readerService";
 import { IoMdPersonAdd } from "react-icons/io";
 import { Modal } from "../components/modals/Modal";
 import { ReaderForm } from "../components/modals/ReaderForm";
 import { ReaderItem } from "../components/ui/ReaderItem";
+import { DeleteModal } from "../components/modals/DeleteModal";
+import toast from "react-hot-toast";
 
 export const ReadersPage = () => {
   const[readers, setReaders] = useState<ReaderDto[]>([]);
   const[isLoading, setIsLoading] = useState(true);
-  const[isOpen, setIsOpen] = useState(false);
+  const[isCreareModalOpen, setIsCreateModalOpen] = useState(false);
+  const[isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const[readerToDelete, setReaderToDelete] = useState<number | null>(null);
+  const[readerToEdit, setReaderToEdit] = useState<ReaderDto | null>(null);
 
-  const handleOpen = () => setIsOpen((curr) => !curr); 
+  const handleOpenForm = (reader?: ReaderDto) => {
+    setReaderToEdit(reader || null);
+    setIsCreateModalOpen(true);
+  }
+  
+  const handleCloseForm = () => {
+    setReaderToEdit(null);
+    setIsCreateModalOpen(false);
+  }
+
+  const handleDeleteModalOpen = () => setIsDeleteModalOpen((curr) => !curr);
+
+  const openDeleteModal = (readerId: number) => {
+    setReaderToDelete(readerId);
+    handleDeleteModalOpen();
+  }
 
   const fetchReaders = async () => {
     try{
@@ -23,6 +43,20 @@ export const ReadersPage = () => {
     }
   };
 
+  const handleDelete = async() => {{
+    if(!readerToDelete){
+      return;
+    }
+    try{
+      await deleteReader(readerToDelete);
+      toast.success("Reader successfully deleted!");
+      setReaderToDelete(null);
+      fetchReaders();
+    }finally{
+      handleDeleteModalOpen();
+    }
+  }}
+
   useEffect(() => {
     fetchReaders();
   }, []);
@@ -31,7 +65,7 @@ export const ReadersPage = () => {
     <section className="p-4">
       <div className="flex justify-end mb-4">
         <button
-          onClick={handleOpen}
+          onClick={() => handleOpenForm()}
           className="flex items-center gap-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
         >
           Create
@@ -46,7 +80,12 @@ export const ReadersPage = () => {
           readers.length > 0 ? (
             <ul className="space-y-2">
               {readers.map((reader) => (
-                <ReaderItem key={reader.id} reader={reader}/>
+                <ReaderItem 
+                  key={reader.id} 
+                  reader={reader}
+                  onDelete={() => openDeleteModal(reader.id)}
+                  onEdit={() => handleOpenForm(reader)}  
+                />
               ))}
             </ul>
           ) : (
@@ -55,8 +94,19 @@ export const ReadersPage = () => {
         )}
       </div>
 
-      <Modal isOpen={isOpen} onClose={handleOpen}>
-        <ReaderForm onClose={handleOpen} onReaderCreated={fetchReaders} />
+      <Modal isOpen={isCreareModalOpen} onClose={handleCloseForm}>
+        <ReaderForm 
+          onClose={handleCloseForm} 
+          onReaderSaved={fetchReaders} 
+          readerToEdit={readerToEdit}/>
+      </Modal>
+      
+      <Modal isOpen={isDeleteModalOpen} onClose={handleDeleteModalOpen}>
+        <DeleteModal
+          onClose={handleDeleteModalOpen}
+          onConfirm={handleDelete}
+          message={'Delete this reader?'}
+        />
       </Modal>
     </section>
   )
