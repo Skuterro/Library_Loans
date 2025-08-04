@@ -3,6 +3,7 @@ import type { IconType } from "react-icons";
 import { ImBooks } from "react-icons/im";
 import { IoLibrary } from "react-icons/io5";
 import { FaUserFriends } from "react-icons/fa";
+import { CiBookmarkCheck } from "react-icons/ci";
 
 export const Navbar = () => {
   return (
@@ -17,6 +18,7 @@ export const Navbar = () => {
       <ul className="flex space-x-20 items-center mx-auto">
         <NavItem to="/Books" text={("Books")} icon={ImBooks} />
         <NavItem to="/Readers" text={("Readers")} icon={FaUserFriends} />
+        <NavItem to="/Loans" text={("Loans")} icon={CiBookmarkCheck} />
       </ul>
     </nav>
   )

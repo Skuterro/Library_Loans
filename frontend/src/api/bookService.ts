@@ -1,10 +1,16 @@
 import type { BookDto } from "../models/book/BookDto"
-import axiosClient from "./axiosClient";
 import type { BookCreateDto } from "../models/book/BookCreateDto";
+import type { SimpleBookDto } from "../models/book/SimpleBookDto";
+import axiosClient from "./axiosClient";
 
 export const getAllBooks = async (): Promise<BookDto[]> => {
-    const response = await axiosClient.get('/Books');
-    return response.data;
+  const response = await axiosClient.get('/Books');
+  return response.data;
+};
+
+export const getAvailableBooks = async (): Promise<SimpleBookDto[]> => {
+  const response = await axiosClient.get('/AvailableBooks');
+  return response.data;
 };
 
 export const createBook = async(bookData: BookCreateDto) : Promise<BookDto> => {
@@ -17,6 +23,6 @@ export const updateBook = async(bookId: number, bookData: BookCreateDto) : Promi
   return response.data;
 }
 
-export const deleteBook = async(id: number): Promise<void> => {
-    await axiosClient.delete(`/Books/${id}`);
+export const deleteBook = async(bookId: number): Promise<void> => {
+  await axiosClient.delete(`/Books/${bookId}`);
 };

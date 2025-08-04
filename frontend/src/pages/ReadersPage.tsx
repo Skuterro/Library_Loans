@@ -6,32 +6,56 @@ import { Modal } from "../components/modals/Modal";
 import { ReaderForm } from "../components/forms/ReaderForm";
 import { ReaderItem } from "../components/ui/ReaderItem";
 import { DeleteModal } from "../components/modals/DeleteModal";
+import { ReaderLoansModal } from "../components/modals/ReaderLoansModal";
 import toast from "react-hot-toast";
+import { LoanBookModal } from "../components/modals/LoanBookModal";
 
 export const ReadersPage = () => {
   const[readers, setReaders] = useState<ReaderDto[]>([]);
   const[isLoading, setIsLoading] = useState(true);
   const[isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const[isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const[isReaderLoansModalOpen, setIsReaderLoansModalOpen] = useState(false);
+  const[isLoanBookModalOpen, setIsLoanBookModalOpen] = useState(false);
   const[readerToDelete, setReaderToDelete] = useState<number | null>(null);
   const[readerToUpdate, setReaderToUpdate] = useState<ReaderDto | null>(null);
+  const[readerLoans, setReaderLoans] = useState<ReaderDto | null>(null);
+  const[selectedReader, setSelectedReader] = useState<ReaderDto | null>(null);
 
   const handleOpenForm = (reader?: ReaderDto) => {
     setReaderToUpdate(reader || null);
     setIsCreateModalOpen(true);
-  }
+  };
   
   const handleCloseForm = () => {
     setReaderToUpdate(null);
     setIsCreateModalOpen(false);
-  }
+  };
 
-  const handleDeleteModalOpen = () => setIsDeleteModalOpen((curr) => !curr);
-
-  const openDeleteModal = (readerId: number) => {
+  const handleOpenDeleteModal = (readerId: number) => {
     setReaderToDelete(readerId);
-    handleDeleteModalOpen();
+    setIsDeleteModalOpen(true);
+  };
+
+  const handleOpenLoanBookModal = (reader: ReaderDto)=> {
+    setSelectedReader(reader);
+    setIsLoanBookModalOpen(true);
   }
+
+  const handleCloaseLoanBookModal = () => {
+    setSelectedReader(null);
+    setIsLoanBookModalOpen(false);
+  }
+
+  const handleOpenLoansModal = (reader: ReaderDto) => {
+    setReaderLoans(reader);
+    setIsReaderLoansModalOpen(true);
+  };
+
+  const handleCloseLoansModal = () => {
+    setIsReaderLoansModalOpen(false);
+    setReaderLoans(null);
+  };
 
   const fetchReaders = async () => {
     try{
@@ -53,9 +77,9 @@ export const ReadersPage = () => {
       setReaderToDelete(null);
       fetchReaders();
     }finally{
-      handleDeleteModalOpen();
+      setIsDeleteModalOpen(false);
     }
-  }
+  };
 
   useEffect(() => {
     fetchReaders();
@@ -82,8 +106,10 @@ export const ReadersPage = () => {
                 <ReaderItem 
                   key={reader.id} 
                   reader={reader}
-                  onDelete={() => openDeleteModal(reader.id)}
-                  onEdit={() => handleOpenForm(reader)}  
+                  onDelete={() => handleOpenDeleteModal(reader.id)}
+                  onEdit={() => handleOpenForm(reader)}
+                  onViewLoans={() => handleOpenLoansModal(reader)}  
+                  onLoanBook={() => handleOpenLoanBookModal(reader)}
                 />
               ))}
             </ul>
@@ -100,13 +126,23 @@ export const ReadersPage = () => {
           readerToUpdate={readerToUpdate}/>
       </Modal>
       
-      <Modal isOpen={isDeleteModalOpen} onClose={handleDeleteModalOpen}>
+      <Modal isOpen={isDeleteModalOpen} onClose={() => setIsDeleteModalOpen(false)}>
         <DeleteModal
-          onClose={handleDeleteModalOpen}
+          onClose={() => setIsDeleteModalOpen(false)}
           onConfirm={handleDelete}
           message={'Delete this reader?'}
         />
       </Modal>
+
+      <Modal isOpen={isReaderLoansModalOpen} onClose={handleCloseLoansModal}>
+        {readerLoans && <ReaderLoansModal reader={readerLoans} />}
+      </Modal>
+
+      {selectedReader && (
+        <Modal isOpen={isLoanBookModalOpen} onClose={handleCloaseLoanBookModal}>
+          <LoanBookModal reader={selectedReader}/>
+        </Modal>
+      )}
     </section>
   )
 }
