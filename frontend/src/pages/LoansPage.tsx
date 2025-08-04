@@ -2,6 +2,9 @@ import { useEffect, useState } from "react"
 import type { LoanDto } from "../models/loan/LoanDto"
 import { getAllLoans } from "../api/loanService";
 import { FcApproval } from "react-icons/fc";
+import { returnBook } from "../api/loanService";
+import toast from "react-hot-toast";
+import { FaUndo } from "react-icons/fa";
 
 export const LoansPage = () => {
 	const[loans, setLoans] = useState<LoanDto[]>([]);
@@ -16,6 +19,12 @@ export const LoansPage = () => {
 			setIsLoading(false);
 		}
 	};
+
+	const handleReturn = async(loanId: number) => {
+		await returnBook(loanId);
+		toast.success("Book returned to library!");
+		await fetchLoans();
+	}
 
 	useEffect(() => {
 		fetchLoans();
@@ -47,7 +56,13 @@ export const LoansPage = () => {
 										{loan.returnDate ? (
 											<>{new Date(loan.returnDate).toLocaleDateString()} <FcApproval /></>
 										) : (
-											'Not returned'
+											<button
+												onClick={() => handleReturn(loan.id)}
+												className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white rounded-md flex items-center gap-2 font-semibold transition-colors justify-center"
+											>
+												<FaUndo />
+												Return
+											</button>
 										)}
 									</td>
 								</tr>

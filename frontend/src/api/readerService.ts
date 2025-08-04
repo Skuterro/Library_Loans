@@ -1,15 +1,15 @@
 import axiosClient from "./axiosClient";
 import type { ReaderCreateDto } from "../models/reader/ReaderCreateDto"
 import type { ReaderDto } from "../models/reader/ReaderDto";
-import type { SimpleBookDto } from "../models/book/SimpleBookDto";
+import type { LoanDto } from "../models/loan/LoanDto";
 
 export const getAllReaders = async (): Promise<ReaderDto[]> => {
   const response = await axiosClient.get('/Readers');
   return response.data;
 };
 
-export const getReaderBooks = async(readerId: number) : Promise<SimpleBookDto[]> => {
-  const response = await axiosClient.get(`/Readers/${readerId}/books`);
+export const getReaderLoans = async(readerId: number) : Promise<LoanDto[]> => {
+  const response = await axiosClient.get(`/Readers/${readerId}/loans`);
   return response.data;
 }
 
