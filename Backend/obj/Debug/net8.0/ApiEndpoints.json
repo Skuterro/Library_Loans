@@ -1,6 +1,26 @@
 [
   {
     "ContainingType": "Backend.Controllers.BooksController",
+    "Method": "GetAvailableBooks",
+    "RelativePath": "AvailableBooks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Backend.Models.Responses.BookResponses.BookResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.BooksController",
     "Method": "GetAllBooks",
     "RelativePath": "Books",
     "HttpMethod": "GET",
@@ -61,7 +81,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Backend.Models.Responses.BookResponses.BookResponseDto",
+        "Type": "Backend.Models.Responses.BookResponses.SimpleBookResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -92,7 +112,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Backend.Models.Responses.BookResponses.BookResponseDto",
+        "Type": "Backend.Models.Responses.BookResponses.SimpleBookResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -119,73 +139,16 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Backend.Controllers.BooksController",
-    "Method": "LoanBook",
-    "RelativePath": "Books/{id}/loan",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "loanBookDto",
-        "Type": "Backend.Models.Requests.BookRequests.LoanBookDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Backend.Models.Responses.BookResponses.BookResponseDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Backend.Controllers.BooksController",
-    "Method": "ReturnBook",
-    "RelativePath": "Books/{id}/return",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Backend.Models.Responses.BookResponses.BookResponseDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Backend.Controllers.ClientsController",
-    "Method": "GetAllClients",
-    "RelativePath": "Clients",
+    "ContainingType": "Backend.Controllers.LoansController",
+    "Method": "GetAllLoans",
+    "RelativePath": "Loans",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Backend.Models.Responses.ClientResponses.ClientResponseDto, Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Backend.Models.Responses.LoanResponses.LoanResponseDto, Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -196,25 +159,35 @@
     ]
   },
   {
-    "ContainingType": "Backend.Controllers.ClientsController",
-    "Method": "Createclient",
-    "RelativePath": "Clients",
+    "ContainingType": "Backend.Controllers.LoansController",
+    "Method": "LoanBook",
+    "RelativePath": "Loans",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "clientDto",
-        "Type": "Backend.Models.Requests.ClientRequests.ClientCreateDto",
+        "Name": "loanBookDto",
+        "Type": "Backend.Models.Requests.LoanRequests.LoanBookDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Backend.Models.Responses.LoanResponses.LoanResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "Backend.Controllers.ClientsController",
-    "Method": "GetClientById",
-    "RelativePath": "Clients/{id}",
+    "ContainingType": "Backend.Controllers.LoansController",
+    "Method": "GetLoanById",
+    "RelativePath": "Loans/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -227,7 +200,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Backend.Models.Responses.ClientResponses.ClientResponseDto",
+        "Type": "Backend.Models.Responses.LoanResponses.LoanResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -238,9 +211,71 @@
     ]
   },
   {
-    "ContainingType": "Backend.Controllers.ClientsController",
-    "Method": "UpdateClient",
-    "RelativePath": "Clients/{id}",
+    "ContainingType": "Backend.Controllers.ReadersController",
+    "Method": "GetAllReaders",
+    "RelativePath": "Readers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Backend.Models.Responses.ClientResponses.ReaderResponseDto, Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.ReadersController",
+    "Method": "CreateReader",
+    "RelativePath": "Readers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clientDto",
+        "Type": "Backend.Models.Requests.ClientRequests.ReaderCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.ReadersController",
+    "Method": "GetReaderById",
+    "RelativePath": "Readers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Backend.Models.Responses.ClientResponses.ReaderResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.ReadersController",
+    "Method": "UpdateReader",
+    "RelativePath": "Readers/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -252,13 +287,13 @@
       },
       {
         "Name": "clientDto",
-        "Type": "Backend.Models.Requests.ClientRequests.ClientUpdateDto",
+        "Type": "Backend.Models.Requests.ClientRequests.ReaderUpdateDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Backend.Models.Responses.ClientResponses.ClientResponseDto",
+        "Type": "Backend.Models.Responses.ClientResponses.ReaderResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -269,9 +304,9 @@
     ]
   },
   {
-    "ContainingType": "Backend.Controllers.ClientsController",
-    "Method": "DeleteClient",
-    "RelativePath": "Clients/{id}",
+    "ContainingType": "Backend.Controllers.ReadersController",
+    "Method": "DeleteReader",
+    "RelativePath": "Readers/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -283,5 +318,57 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.ReadersController",
+    "Method": "GetReaderBooks",
+    "RelativePath": "Readers/{id}/books",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Backend.Models.Responses.BookResponses.SimpleBookResponseDto, Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.LoansController",
+    "Method": "ReturnBook",
+    "RelativePath": "return/{loanId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Backend.Models.Responses.LoanResponses.LoanResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

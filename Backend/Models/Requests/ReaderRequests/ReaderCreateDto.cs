@@ -2,7 +2,7 @@
 
 namespace Backend.Models.Requests.ClientRequests
 {
-    public class ClientCreateDto
+    public class ReaderCreateDto
     {
         [Required(ErrorMessage = "Name is required.")]
         [MaxLength(50, ErrorMessage = "Name cannot exceed 50 characters.")]

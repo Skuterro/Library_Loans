@@ -7,20 +7,25 @@ namespace Backend.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Client> Clients { get; set; }
+        public DbSet<Reader> Readers { get; set; }
         public DbSet<Book> Books { get; set; }
+        public DbSet<Loan> Loans { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Client>()
-                .HasMany(client => client.LoanedBooks)
-                .WithOne(book  => book.Client)
-                .HasForeignKey(book => book.ClientId)
-                .OnDelete(DeleteBehavior.SetNull);
+            modelBuilder.Entity<Loan>()
+                .HasOne(l => l.Reader)
+                .WithMany(r => r.Loans)
+                .HasForeignKey(l => l.ReaderId);
 
-            modelBuilder.Entity<Client>()
+            modelBuilder.Entity<Loan>()
+                .HasOne(l => l.Book)
+                .WithMany(b => b.Loans)
+                .HasForeignKey(l => l.BookId);
+
+            modelBuilder.Entity<Reader>()
                 .HasIndex(client => client.Email)
                 .IsUnique();
 

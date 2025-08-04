@@ -1,4 +1,5 @@
 ﻿using Backend.Models.Requests.BookRequests;
+using Backend.Models.Requests.LoanRequests;
 using Backend.Models.Responses.BookResponses;
 using Backend.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -23,8 +24,15 @@ namespace Backend.Controllers
             return Ok(books);
         }
 
+        [HttpGet("/AvailableBooks")]
+        public async Task<ActionResult<BookResponseDto>> GetAvailableBooks()
+        {
+            var books = await _bookService.GetAvailableBooksAsync();
+            return Ok(books);
+        }
+
         [HttpGet("{id}")]
-        public async Task<ActionResult<BookResponseDto>> GetBookById([FromRoute] int id)
+        public async Task<ActionResult<SimpleBookResponseDto>> GetBookById([FromRoute] int id)
         {
             var book = await _bookService.GetBookByIdAsync(id);
             return Ok(book);
@@ -42,26 +50,9 @@ namespace Backend.Controllers
             return CreatedAtAction(nameof(GetBookById), new { id = createdBook.Id }, createdBook);
         }
 
-        [HttpPost("{id}/loan")]
-        public async Task<ActionResult<BookResponseDto>> LoanBook([FromRoute] int id, [FromBody] LoanBookDto loanBookDto)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            var loanedBook = await _bookService.LoanBookAsync(id, loanBookDto);
-            return Ok(loanedBook);
-        }
-
-        [HttpPost("{id}/return")]
-        public async Task<ActionResult<BookResponseDto>> ReturnBook([FromRoute] int id)
-        {
-            var returnedBook = await _bookService.ReturnBookAsync(id);
-            return Ok(returnedBook);
-        }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<BookResponseDto>> UpdateBook([FromRoute] int id, [FromBody] BookUpdateDto updateDto)
+        public async Task<ActionResult<SimpleBookResponseDto>> UpdateBook([FromRoute] int id, [FromBody] BookUpdateDto updateDto)
         {
             if (!ModelState.IsValid)
             {

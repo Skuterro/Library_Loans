@@ -89,6 +89,35 @@
         }
       }
     },
+    "/AvailableBooks": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BookResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BookResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BookResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Books/{id}": {
       "get": {
         "tags": [
@@ -111,17 +140,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/BookResponseDto"
+                  "$ref": "#/components/schemas/SimpleBookResponseDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BookResponseDto"
+                  "$ref": "#/components/schemas/SimpleBookResponseDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BookResponseDto"
+                  "$ref": "#/components/schemas/SimpleBookResponseDto"
                 }
               }
             }
@@ -168,17 +197,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/BookResponseDto"
+                  "$ref": "#/components/schemas/SimpleBookResponseDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BookResponseDto"
+                  "$ref": "#/components/schemas/SimpleBookResponseDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BookResponseDto"
+                  "$ref": "#/components/schemas/SimpleBookResponseDto"
                 }
               }
             }
@@ -207,21 +236,46 @@
         }
       }
     },
-    "/Books/{id}/loan": {
-      "post": {
+    "/Loans": {
+      "get": {
         "tags": [
-          "Books"
+          "Loans"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LoanResponseDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LoanResponseDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LoanResponseDto"
+                  }
+                }
+              }
             }
           }
+        }
+      },
+      "post": {
+        "tags": [
+          "Loans"
         ],
         "requestBody": {
           "content": {
@@ -248,17 +302,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/BookResponseDto"
+                  "$ref": "#/components/schemas/LoanResponseDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BookResponseDto"
+                  "$ref": "#/components/schemas/LoanResponseDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BookResponseDto"
+                  "$ref": "#/components/schemas/LoanResponseDto"
                 }
               }
             }
@@ -266,10 +320,10 @@
         }
       }
     },
-    "/Books/{id}/return": {
-      "post": {
+    "/Loans/{id}": {
+      "get": {
         "tags": [
-          "Books"
+          "Loans"
         ],
         "parameters": [
           {
@@ -288,17 +342,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/BookResponseDto"
+                  "$ref": "#/components/schemas/LoanResponseDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BookResponseDto"
+                  "$ref": "#/components/schemas/LoanResponseDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BookResponseDto"
+                  "$ref": "#/components/schemas/LoanResponseDto"
                 }
               }
             }
@@ -306,10 +360,50 @@
         }
       }
     },
-    "/Clients": {
+    "/return/{loanId}": {
+      "put": {
+        "tags": [
+          "Loans"
+        ],
+        "parameters": [
+          {
+            "name": "loanId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoanResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoanResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoanResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Readers": {
       "get": {
         "tags": [
-          "Clients"
+          "Readers"
         ],
         "responses": {
           "200": {
@@ -319,7 +413,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ClientResponseDto"
+                    "$ref": "#/components/schemas/ReaderResponseDto"
                   }
                 }
               },
@@ -327,7 +421,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ClientResponseDto"
+                    "$ref": "#/components/schemas/ReaderResponseDto"
                   }
                 }
               },
@@ -335,7 +429,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ClientResponseDto"
+                    "$ref": "#/components/schemas/ReaderResponseDto"
                   }
                 }
               }
@@ -345,23 +439,23 @@
       },
       "post": {
         "tags": [
-          "Clients"
+          "Readers"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClientCreateDto"
+                "$ref": "#/components/schemas/ReaderCreateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClientCreateDto"
+                "$ref": "#/components/schemas/ReaderCreateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ClientCreateDto"
+                "$ref": "#/components/schemas/ReaderCreateDto"
               }
             }
           }
@@ -373,10 +467,10 @@
         }
       }
     },
-    "/Clients/{id}": {
+    "/Readers/{id}/books": {
       "get": {
         "tags": [
-          "Clients"
+          "Readers"
         ],
         "parameters": [
           {
@@ -395,17 +489,66 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClientResponseDto"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SimpleBookResponseDto"
+                  }
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClientResponseDto"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SimpleBookResponseDto"
+                  }
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClientResponseDto"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SimpleBookResponseDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Readers/{id}": {
+      "get": {
+        "tags": [
+          "Readers"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReaderResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReaderResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReaderResponseDto"
                 }
               }
             }
@@ -414,7 +557,7 @@
       },
       "put": {
         "tags": [
-          "Clients"
+          "Readers"
         ],
         "parameters": [
           {
@@ -431,17 +574,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClientUpdateDto"
+                "$ref": "#/components/schemas/ReaderUpdateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClientUpdateDto"
+                "$ref": "#/components/schemas/ReaderUpdateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ClientUpdateDto"
+                "$ref": "#/components/schemas/ReaderUpdateDto"
               }
             }
           }
@@ -452,17 +595,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClientResponseDto"
+                  "$ref": "#/components/schemas/ReaderResponseDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClientResponseDto"
+                  "$ref": "#/components/schemas/ReaderResponseDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClientResponseDto"
+                  "$ref": "#/components/schemas/ReaderResponseDto"
                 }
               }
             }
@@ -471,7 +614,7 @@
       },
       "delete": {
         "tags": [
-          "Clients"
+          "Readers"
         ],
         "parameters": [
           {
@@ -537,7 +680,7 @@
             "format": "int32"
           },
           "loanedBy": {
-            "$ref": "#/components/schemas/SimpleClientResponseDto"
+            "$ref": "#/components/schemas/SimpleReaderResponseDto"
           },
           "loanDate": {
             "type": "string",
@@ -570,7 +713,50 @@
         },
         "additionalProperties": false
       },
-      "ClientCreateDto": {
+      "LoanBookDto": {
+        "required": [
+          "bookId",
+          "readerId"
+        ],
+        "type": "object",
+        "properties": {
+          "readerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bookId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoanResponseDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "book": {
+            "$ref": "#/components/schemas/SimpleBookResponseDto"
+          },
+          "loanedBy": {
+            "$ref": "#/components/schemas/SimpleReaderResponseDto"
+          },
+          "loanDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "returnDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReaderCreateDto": {
         "required": [
           "email",
           "lastName",
@@ -597,7 +783,7 @@
         },
         "additionalProperties": false
       },
-      "ClientResponseDto": {
+      "ReaderResponseDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -615,18 +801,11 @@
           "email": {
             "type": "string",
             "nullable": true
-          },
-          "loanedBooks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SimpleBookResponseDto"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "ClientUpdateDto": {
+      "ReaderUpdateDto": {
         "required": [
           "email",
           "lastName",
@@ -649,19 +828,6 @@
             "minLength": 1,
             "type": "string",
             "format": "email"
-          }
-        },
-        "additionalProperties": false
-      },
-      "LoanBookDto": {
-        "required": [
-          "clientId"
-        ],
-        "type": "object",
-        "properties": {
-          "clientId": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -680,7 +846,7 @@
         },
         "additionalProperties": false
       },
-      "SimpleClientResponseDto": {
+      "SimpleReaderResponseDto": {
         "type": "object",
         "properties": {
           "id": {

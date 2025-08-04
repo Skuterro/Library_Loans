@@ -2,7 +2,7 @@
 
 namespace Backend.Models.Entities
 {
-    public class Client
+    public class Reader
     {
         [Key]
         public int Id { get; set; }
@@ -19,6 +19,7 @@ namespace Backend.Models.Entities
         [MaxLength(50)]
         [EmailAddress]
         public string Email { get; set; } = string.Empty;
-        public ICollection<Book> LoanedBooks { get; set; } = new List<Book>();
+
+        public ICollection<Loan> Loans { get; set; } = new List<Loan>();
     }
 }

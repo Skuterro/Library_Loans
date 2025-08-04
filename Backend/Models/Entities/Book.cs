@@ -15,10 +15,7 @@ namespace Backend.Models.Entities
         [MaxLength(100)]
         public string? Author { get; set; } = string.Empty;
         public short? ReleaseYear { get; set; }
-        public int? ClientId { get; set; }
 
-        [ForeignKey("ClientId")]
-        public Client? Client { get; set; }
-        public DateTime? LoanDate { get; set; }
+        public ICollection<Loan> Loans { get; set; } = new List<Loan>();
     }
 }

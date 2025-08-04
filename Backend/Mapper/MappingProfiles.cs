@@ -4,17 +4,27 @@ using Backend.Models.Requests.BookRequests;
 using Backend.Models.Requests.ClientRequests;
 using Backend.Models.Responses.BookResponses;
 using Backend.Models.Responses.ClientResponses;
+using Backend.Models.Responses.LoanResponses;
 
 namespace Backend.Mapper
 {
-    public class ClientMappingProfile : Profile
+    public class ReaderMappingProfile : Profile
     {
-        public ClientMappingProfile() 
+        public ReaderMappingProfile() 
         {
-            CreateMap<ClientCreateDto, Client>();
-            CreateMap<ClientUpdateDto, Client>();
-            CreateMap<Client, ClientResponseDto>();
-            CreateMap<Client, SimpleClientResponseDto>();
+            CreateMap<ReaderCreateDto, Reader>();
+            CreateMap<ReaderUpdateDto, Reader>();
+            CreateMap<Reader, ReaderResponseDto>();
+            CreateMap<Reader, SimpleReaderResponseDto>();
+        }
+    }
+
+    public class LoanMappingProfile : Profile
+    {
+        public LoanMappingProfile()
+        {
+            CreateMap<Loan, LoanResponseDto>()
+                .ForMember(dest => dest.LoanedBy, opt => opt.MapFrom(src => src.Reader));
         }
     }
 
@@ -25,7 +35,8 @@ namespace Backend.Mapper
             CreateMap<BookCreateDto, Book>();
             CreateMap<BookUpdateDto, Book>();
             CreateMap<Book, BookResponseDto>()
-                .ForMember(dest => dest.LoanedBy, opt => opt.MapFrom(src => src.Client));
+                .ForMember(dest => dest.LoanedBy, opt => opt.MapFrom(src => src.Loans.FirstOrDefault().Reader))
+                .ForMember(dest => dest.LoanDate, opt => opt.MapFrom(src => src.Loans.FirstOrDefault().LoanDate));
             CreateMap<Book, SimpleBookResponseDto>();
         }
     }

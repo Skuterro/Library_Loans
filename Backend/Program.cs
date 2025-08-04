@@ -19,13 +19,14 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.AddScoped<IClientService, ClientService>();
+builder.Services.AddScoped<IReaderService, ReaderService>();
 builder.Services.AddScoped<IBookService, BookService>();
+builder.Services.AddScoped<ILoanService, LoanService>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite("Data Source=Database/App.db"));
 
-builder.Services.AddAutoMapper(typeof(ClientMappingProfile), typeof(BookMappingProfile));
+builder.Services.AddAutoMapper(typeof(ReaderMappingProfile), typeof(BookMappingProfile));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

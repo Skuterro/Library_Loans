@@ -8,7 +8,7 @@ namespace Backend.Models.Responses.BookResponses
         public string Title { get; set; } = string.Empty;
         public string Author { get; set; } = string.Empty;
         public short ReleaseYear { get; set; }
-        public SimpleClientResponseDto? LoanedBy { get; set; }
+        public SimpleReaderResponseDto? LoanedBy { get; set; }
         public DateTime? LoanDate { get; set; }
     }
 }

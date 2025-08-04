@@ -1,6 +1,6 @@
 ﻿namespace Backend.Models.Requests.ClientRequests
 {
-    public class ClientUpdateDto : ClientCreateDto
+    public class ReaderUpdateDto : ReaderCreateDto
     {
 
     }
