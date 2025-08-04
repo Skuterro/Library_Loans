@@ -13,7 +13,7 @@ namespace Backend.Models.Entities
         public string Title { get; set; } = string.Empty;
 
         [MaxLength(100)]
-        public string? Author { get; set; } = string.Empty;
+        public string? Author { get; set; }
         public short? ReleaseYear { get; set; }
 
         public ICollection<Loan> Loans { get; set; } = new List<Loan>();

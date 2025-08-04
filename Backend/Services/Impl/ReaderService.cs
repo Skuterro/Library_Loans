@@ -5,6 +5,7 @@ using Backend.Models.Entities;
 using Backend.Models.Requests.ClientRequests;
 using Backend.Models.Responses.BookResponses;
 using Backend.Models.Responses.ClientResponses;
+using Backend.Models.Responses.LoanResponses;
 using Microsoft.EntityFrameworkCore;
 
 namespace Backend.Services.Impl
@@ -24,6 +25,15 @@ namespace Backend.Services.Impl
         {
             var readers = await _context.Readers.ToListAsync();
             return _mapper.Map<IEnumerable<ReaderResponseDto>>(readers);
+        }
+
+        public async Task<IEnumerable<LoanResponseDto>> GetReaderLoansAsync(int id)
+        {
+            var activeLoans = await _context.Loans
+                                             .Where(l => l.ReaderId == id && l.ReturnDate == null)
+                                             .Include(l => l.Book)
+                                             .ToListAsync();
+            return _mapper.Map<IEnumerable<LoanResponseDto>>(activeLoans);
         }
 
         public async Task<IEnumerable<SimpleBookResponseDto>> GetReaderBooksAsync(int id)
@@ -113,5 +123,6 @@ namespace Backend.Services.Impl
         {
             return _context.Readers.AnyAsync(c => c.Id == id);
         }
+
     }
 }

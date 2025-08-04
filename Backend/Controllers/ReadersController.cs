@@ -26,6 +26,13 @@ namespace Backend.Controllers
             return Ok(readers);
         }
 
+        [HttpGet("{id}/loans")]
+        public async Task<ActionResult<IEnumerable<SimpleBookResponseDto>>> GetReaderLoans([FromRoute] int id)
+        {
+            var loans = await _readerService.GetReaderLoansAsync(id);
+            return Ok(loans);
+        }
+
         [HttpGet("{id}/books")]
         public async Task<ActionResult<IEnumerable<SimpleBookResponseDto>>> GetReaderBooks([FromRoute] int id)
         {
@@ -36,31 +43,31 @@ namespace Backend.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ReaderResponseDto>> GetReaderById([FromRoute] int id)
         {
-            var clients = await _readerService.GetReaderByIdAsync(id);
-            return Ok(clients);
+            var readers = await _readerService.GetReaderByIdAsync(id);
+            return Ok(readers);
         }
 
         [HttpPost]
-        public async Task<ActionResult> CreateReader([FromBody] ReaderCreateDto clientDto)
+        public async Task<ActionResult> CreateReader([FromBody] ReaderCreateDto readerDto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var createdClient = await _readerService.CreateReaderAsync(clientDto);
-            return CreatedAtAction(nameof(GetReaderById), new { id = createdClient.Id }, createdClient);
+            var createdReader = await _readerService.CreateReaderAsync(readerDto);
+            return CreatedAtAction(nameof(GetReaderById), new { id = createdReader.Id }, createdReader);
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<ReaderResponseDto>> UpdateReader([FromRoute] int id,  [FromBody] ReaderUpdateDto clientDto)
+        public async Task<ActionResult<ReaderResponseDto>> UpdateReader([FromRoute] int id,  [FromBody] ReaderUpdateDto readerDto)
         {
             if (!ModelState.IsValid)
             {  
                 return BadRequest(ModelState); 
             }
-            var updatedClient = await _readerService.UpdateReaderAsync(id, clientDto);
-            return Ok(updatedClient);
+            var updatedReader = await _readerService.UpdateReaderAsync(id, readerDto);
+            return Ok(updatedReader);
         }
 
         [HttpDelete("{id}")]

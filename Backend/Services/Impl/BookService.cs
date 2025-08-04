@@ -26,6 +26,7 @@ namespace Backend.Services.Impl
                                     .Include(b => b.Loans.Where(l => l.ReturnDate == null))
                                     .ThenInclude(l => l.Reader)
                                     .ToListAsync();
+
             return _mapper.Map<IEnumerable<BookResponseDto>>(books);
         }
 

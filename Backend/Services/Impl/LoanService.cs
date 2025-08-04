@@ -33,7 +33,7 @@ namespace Backend.Services.Impl
             return _mapper.Map<IEnumerable<LoanResponseDto>>(loans);
         }
 
-        public async Task<LoanResponseDto?> GetLoanByIdAsync(int id)
+        public async Task<LoanResponseDto> GetLoanByIdAsync(int id)
         {
             var loan = await _context.Loans
                                     .Include(l => l.Reader)
@@ -44,6 +44,7 @@ namespace Backend.Services.Impl
             {
                 throw new NotFoundException($"Loan with ID {id} does not exist.");
             }
+
             return _mapper.Map<LoanResponseDto>(loan);
         }
 

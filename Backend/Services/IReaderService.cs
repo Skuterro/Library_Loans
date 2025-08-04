@@ -1,6 +1,7 @@
 ﻿using Backend.Models.Requests.ClientRequests;
 using Backend.Models.Responses.BookResponses;
 using Backend.Models.Responses.ClientResponses;
+using Backend.Models.Responses.LoanResponses;
 
 namespace Backend.Services
 {
@@ -9,6 +10,7 @@ namespace Backend.Services
         Task<IEnumerable<ReaderResponseDto>> GetAllReadersAsync();
         Task<ReaderResponseDto> GetReaderByIdAsync(int id);
         Task<IEnumerable<SimpleBookResponseDto>> GetReaderBooksAsync(int id);
+        Task<IEnumerable<LoanResponseDto>> GetReaderLoansAsync(int id);
         Task<ReaderResponseDto> CreateReaderAsync(ReaderCreateDto clientDto);
         Task<ReaderResponseDto> UpdateReaderAsync(int id, ReaderUpdateDto updateDto);
         Task DeleteReaderAsync(int id);

@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "D:\\code\\zadanie rekrutacyjne\\Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\mapper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:mapper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\responses\\loanresponses\\loanresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\responses\\loanresponses\\loanresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\entities\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\entities\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\services\\impl\\loanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\impl\\loanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\responses\\bookresponses\\bookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\responses\\bookresponses\\bookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\mapper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:mapper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\services\\impl\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\impl\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\services\\impl\\loanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\impl\\loanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\controllers\\readerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -122,11 +126,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "Loan.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Loan.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Loan.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Loan.cs",
+              "RelativeToolTip": "Models\\Entities\\Loan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T17:25:54.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "BookResponseDto.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\BookResponses\\BookResponseDto.cs",
               "RelativeDocumentMoniker": "Models\\Responses\\BookResponses\\BookResponseDto.cs",
@@ -143,20 +160,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LoanResponseDto.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\LoanResponses\\LoanResponseDto.cs",
               "RelativeDocumentMoniker": "Models\\Responses\\LoanResponses\\LoanResponseDto.cs",
               "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\LoanResponses\\LoanResponseDto.cs",
               "RelativeToolTip": "Models\\Responses\\LoanResponses\\LoanResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-04T16:28:26.002Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ReadersController.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\ReadersController.cs",
               "RelativeDocumentMoniker": "Controllers\\ReadersController.cs",
@@ -169,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "BooksController.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\BooksController.cs",
               "RelativeDocumentMoniker": "Controllers\\BooksController.cs",
@@ -182,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IBookService.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\IBookService.cs",
               "RelativeDocumentMoniker": "Services\\IBookService.cs",
@@ -195,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "BookService.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\BookService.cs",
               "RelativeDocumentMoniker": "Services\\Impl\\BookService.cs",
@@ -208,20 +225,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "LoanService.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\LoanService.cs",
               "RelativeDocumentMoniker": "Services\\Impl\\LoanService.cs",
               "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\LoanService.cs",
               "RelativeToolTip": "Services\\Impl\\LoanService.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAkwF8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwFMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-04T14:16:32.138Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ReaderService.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\ReaderService.cs",
               "RelativeDocumentMoniker": "Services\\Impl\\ReaderService.cs",
@@ -234,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "LoansController.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\LoansController.cs",
               "RelativeDocumentMoniker": "Controllers\\LoansController.cs",
@@ -247,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MappingProfiles.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Mapper\\MappingProfiles.cs",
               "RelativeDocumentMoniker": "Mapper\\MappingProfiles.cs",
@@ -260,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "ILoanService.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\ILoanService.cs",
               "RelativeDocumentMoniker": "Services\\ILoanService.cs",
@@ -273,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "IReaderService.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\IReaderService.cs",
               "RelativeDocumentMoniker": "Services\\IReaderService.cs",
@@ -286,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "SimpleBookResponseDto.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\BookResponses\\SimpleBookResponseDto.cs",
               "RelativeDocumentMoniker": "Models\\Responses\\BookResponses\\SimpleBookResponseDto.cs",
@@ -299,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -312,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "LoanBookDto.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\LoanRequests\\LoanBookDto.cs",
               "RelativeDocumentMoniker": "Models\\Requests\\LoanRequests\\LoanBookDto.cs",
@@ -325,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "ReaderResponseDto.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\ReaderResponses\\ReaderResponseDto.cs",
               "RelativeDocumentMoniker": "Models\\Responses\\ReaderResponses\\ReaderResponseDto.cs",
@@ -338,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "BookUpdateDto.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\BookRequests\\BookUpdateDto.cs",
               "RelativeDocumentMoniker": "Models\\Requests\\BookRequests\\BookUpdateDto.cs",
@@ -351,7 +368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "BookCreateDto.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\BookRequests\\BookCreateDto.cs",
               "RelativeDocumentMoniker": "Models\\Requests\\BookRequests\\BookCreateDto.cs",
@@ -364,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Database\\AppDbContext.cs",
@@ -377,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "ExceptionHandlingMiddleware.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Middleware\\ExceptionHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "Middleware\\ExceptionHandlingMiddleware.cs",
@@ -389,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Book.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Book.cs",
               "RelativeDocumentMoniker": "Models\\Entities\\Book.cs",
@@ -402,7 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "BadRequestException.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Exceptions\\BadRequestException.cs",
               "RelativeDocumentMoniker": "Exceptions\\BadRequestException.cs",
@@ -414,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "NotFoundException.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Exceptions\\NotFoundException.cs",
               "RelativeDocumentMoniker": "Exceptions\\NotFoundException.cs",
@@ -426,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -438,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "20250731132508_update0003.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\Migrations\\20250731132508_update0003.cs",
               "RelativeDocumentMoniker": "Database\\Migrations\\20250731132508_update0003.cs",
@@ -450,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "20250730192500_update0002.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\Migrations\\20250730192500_update0002.cs",
               "RelativeDocumentMoniker": "Database\\Migrations\\20250730192500_update0002.cs",
@@ -462,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "20250730192047_update0001.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\Migrations\\20250730192047_update0001.cs",
               "RelativeDocumentMoniker": "Database\\Migrations\\20250730192047_update0001.cs",
@@ -474,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
