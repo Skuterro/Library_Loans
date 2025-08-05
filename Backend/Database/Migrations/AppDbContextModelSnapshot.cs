@@ -40,9 +40,6 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Title")
-                        .IsUnique();
-
                     b.ToTable("Books");
                 });
 

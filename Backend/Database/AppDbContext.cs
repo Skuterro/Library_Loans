@@ -28,11 +28,7 @@ namespace Backend.Data
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Reader>()
-                .HasIndex(client => client.Email)
-                .IsUnique();
-
-            modelBuilder.Entity<Book>()
-                .HasIndex(book => book.Title)
+                .HasIndex(reader => reader.Email)
                 .IsUnique();
         }
     }

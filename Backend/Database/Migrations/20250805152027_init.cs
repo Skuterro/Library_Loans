@@ -72,12 +72,6 @@ namespace Backend.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Books_Title",
-                table: "Books",
-                column: "Title",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Loans_BookId",
                 table: "Loans",
                 column: "BookId");
