@@ -7,7 +7,7 @@ export const Layout = () => (
     <div className="bg-gray-800 text-gray-300 min-h-screen">
       <Navbar />
       <Wrapper>
-        <main>
+        <main className="flex-grow">
             <Outlet />
         </main>
       </Wrapper>

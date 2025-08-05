@@ -1,10 +1,11 @@
+import type { ReaderDto } from "../../models/reader/ReaderDto";
+import type { ReaderCreateDto } from "../../models/reader/ReaderCreateDto";
 import { useState, useEffect } from "react";
 import { createReader, updateReader } from "../../api/readerService";
-import type { ReaderCreateDto } from "../../models/reader/ReaderCreateDto";
 import { toast } from "react-hot-toast";
-import type { ReaderDto } from "../../models/reader/ReaderDto";
 
-type ReaderFormProps = {
+
+interface ReaderFormProps {
   onClose: () => void;
   onReaderSaved: () => void;
   readerToUpdate?: ReaderDto | null;
@@ -35,25 +36,19 @@ export const ReaderForm = ({ onClose, onReaderSaved, readerToUpdate }: ReaderFor
     }
 
     setIsSubmitting(true);
-    try {
-      if (readerToUpdate) {
-        await updateReader(readerToUpdate.id, formData);
-        toast.success("Reader successfully updated!");
-      } else {
-        await createReader(formData);
-        toast.success("Reader successfully created!");
-      }
-      onReaderSaved();
-      onClose();
-      } catch (err) {
-        if (err instanceof Error) {
-          toast.error(err.message);
+      try {
+        if (readerToUpdate) {
+          await updateReader(readerToUpdate.id, formData);
+          toast.success("Reader successfully updated!");
         } else {
-          toast.error("Wystąpił nieznany błąd.");
+          await createReader(formData);
+          toast.success("Reader successfully created!");
         }
+        onReaderSaved();
+        onClose();
       } finally {
         setIsSubmitting(false);
-      }//TEGO CATCHA OGARNĄĆ
+      }
   };
 
   useEffect(() => {

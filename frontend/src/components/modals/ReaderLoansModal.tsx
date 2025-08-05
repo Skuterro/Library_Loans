@@ -1,11 +1,12 @@
 import type { ReaderDto } from "../../models/reader/ReaderDto";
+import type { LoanDto } from "../../models/loan/LoanDto";
 import { GiBookmarklet } from "react-icons/gi";
 import { FaUndo } from "react-icons/fa";
 import { returnBook } from "../../api/loanService";
-import toast from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import { useState, useEffect } from "react";
 import { getReaderLoans } from "../../api/readerService";
-import type { LoanDto } from "../../models/loan/LoanDto";
+
 
 interface LoansModalProps {
     reader: ReaderDto;

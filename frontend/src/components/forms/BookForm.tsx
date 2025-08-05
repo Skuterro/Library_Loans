@@ -1,8 +1,8 @@
+import type { BookDto } from "../../models/book/BookDto";
+import type { BookCreateDto } from "../../models/book/BookCreateDto";
 import { useState, useEffect } from "react";
 import { createBook, updateBook } from "../../api/bookService";
 import { toast } from "react-hot-toast";
-import type { BookDto } from "../../models/book/BookDto";
-import type { BookCreateDto } from "../../models/book/BookCreateDto";
 
 type BookFormProps = {
   onClose: () => void;
@@ -45,15 +45,9 @@ export const BookForm = ({ onClose, onBookSaved, bookToUpdate }: BookFormProps) 
       }
       onBookSaved();
       onClose();
-      } catch (err) {
-        if (err instanceof Error) {
-          toast.error(err.message);
-        } else {
-          toast.error("Wystąpił nieznany błąd.");
-        }
       } finally {
         setIsSubmitting(false);
-      }//TEGO CATCHA OGARNĄĆ
+      }
   };
 
   useEffect(() => {

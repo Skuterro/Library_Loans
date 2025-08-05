@@ -1,10 +1,10 @@
-import type { SimpleReaderDto } from "../reader/SimpleReaderDto";
+import type { ReaderDto } from "../reader/ReaderDto";
 
 export interface BookDto {
     id: number;
     title: string;
     author: string;
     releaseYear: number;
-    loanedBy: SimpleReaderDto | null;
+    loanedBy: ReaderDto | null;
     loanDate: string | null;
 }

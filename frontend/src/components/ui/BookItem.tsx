@@ -1,6 +1,7 @@
 import type { BookDto } from "../../models/book/BookDto";
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import { GiBookmarklet } from "react-icons/gi";
+import { formatDate } from "../../utils/formatDate";
 
 interface BookItemProps {
 	book: BookDto;
@@ -9,26 +10,6 @@ interface BookItemProps {
 }
 
 export const BookItem = ({ book, onDelete, onEdit}: BookItemProps) => {
-
-	const formatDate = (dateStr: string | null) => {
-		if(!dateStr){
-			return null;
-		}
-    const date = new Date(`${dateStr}Z`);
-    const formattedDate = new Intl.DateTimeFormat('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: false,
-      timeZone: 'Europe/Warsaw',
-    }).format(date);
-
-    return formattedDate;
-	}
-
   return(
 		<li
 			key={book.id}

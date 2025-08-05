@@ -5,7 +5,7 @@ import { getAvailableBooks} from "../../api/bookService";
 import { loanBook } from "../../api/loanService";
 import { FaBook } from "react-icons/fa";
 import { GiBookmarklet } from "react-icons/gi";
-import toast from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
 interface LoanBookModalProps {
   reader: ReaderDto;
