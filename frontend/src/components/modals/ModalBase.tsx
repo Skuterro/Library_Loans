@@ -1,10 +1,10 @@
 import { RxCross2 } from "react-icons/rx";
 
-interface ModalProps  {
+interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
-};
+}
 
 export const Modal = ({ isOpen, onClose, children }: ModalProps) => {
   if (!isOpen) return null;
@@ -31,13 +31,13 @@ export const Modal = ({ isOpen, onClose, children }: ModalProps) => {
               animation: pop-up 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
             }
           `}</style>
-          <div className="flex justify-end">
-            <button onClick={onClose}>
-              <RxCross2 className="text-white text-2xl hover:text-red-400 transition-colors "/>
-            </button>
-          </div>
-            {children}
-          </div>
+        <div className="flex justify-end">
+          <button onClick={onClose}>
+            <RxCross2 className="text-white text-2xl hover:text-red-400 transition-colors " />
+          </button>
+        </div>
+        {children}
       </div>
+    </div>
   );
 };

@@ -3,19 +3,19 @@ import type { LoanDto } from "../models/loan/LoanDto";
 import type { PagedResult } from "../models/PagedResult";
 import axiosClient from "./axiosClient";
 
-interface LoanQueryParams{
-	pageNumber?: number;
+interface LoanQueryParams {
+  pageNumber?: number;
   pageSize?: number;
-	readerEmail?: string;
-	bookTitle?: string;
+  readerEmail?: string;
+  bookTitle?: string;
 }
 
-export const getAllLoans = async(
-	params: LoanQueryParams
-) : Promise<PagedResult<LoanDto>> => {
-	const query = new URLSearchParams();
+export const getAllLoans = async (
+  params: LoanQueryParams,
+): Promise<PagedResult<LoanDto>> => {
+  const query = new URLSearchParams();
 
-	if (params.pageNumber) {
+  if (params.pageNumber) {
     query.append("pageNumber", params.pageNumber.toString());
   }
   if (params.pageSize) {
@@ -24,19 +24,19 @@ export const getAllLoans = async(
   if (params.readerEmail && params.readerEmail.trim() !== "") {
     query.append("readerEmail", params.readerEmail);
   }
-	if (params.bookTitle && params.bookTitle.trim() !== "") {
+  if (params.bookTitle && params.bookTitle.trim() !== "") {
     query.append("bookTitle", params.bookTitle);
   }
 
   const response = await axiosClient.get(`/api/loans?${query.toString()}`);
-	return response.data;
+  return response.data;
 };
 
-export const loanBook = async(loanBookDto: LoanBookDto): Promise<void> => {
-	const response = await axiosClient.post('/api/loans', loanBookDto);
-	return response.data;
+export const loanBook = async (loanBookDto: LoanBookDto): Promise<void> => {
+  const response = await axiosClient.post("/api/loans", loanBookDto);
+  return response.data;
 };
 
-export const returnBook = async(loanId: number): Promise<void> => {
-	await axiosClient.put(`/api/loans/return/${loanId}`)
-}
+export const returnBook = async (loanId: number): Promise<void> => {
+  await axiosClient.put(`/api/loans/return/${loanId}`);
+};

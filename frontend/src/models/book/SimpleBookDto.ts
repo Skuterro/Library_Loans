@@ -1,4 +1,4 @@
 export interface SimpleBookDto {
-    id: number;
-    title: string;
+  id: number;
+  title: string;
 }

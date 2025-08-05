@@ -1,5 +1,5 @@
 import axiosClient from "./axiosClient";
-import type { ReaderCreateDto } from "../models/reader/ReaderCreateDto"
+import type { ReaderCreateDto } from "../models/reader/ReaderCreateDto";
 import type { ReaderDto } from "../models/reader/ReaderDto";
 import type { LoanDto } from "../models/loan/LoanDto";
 import type { PagedResult } from "../models/PagedResult";
@@ -11,7 +11,7 @@ interface ReaderQueryParams {
 }
 
 export const getAllReaders = async (
-  params: ReaderQueryParams
+  params: ReaderQueryParams,
 ): Promise<PagedResult<ReaderDto>> => {
   const query = new URLSearchParams();
 
@@ -24,27 +24,34 @@ export const getAllReaders = async (
   if (params.email && params.email.trim() !== "") {
     query.append("email", params.email);
   }
-  //console.log(query.toString());
+
   const response = await axiosClient.get(`/api/readers?${query.toString()}`);
   return response.data;
 };
 
-export const getReaderLoans = async(readerId: number) : Promise<LoanDto[]> => {
+export const getReaderLoans = async (readerId: number): Promise<LoanDto[]> => {
   const response = await axiosClient.get(`/api/readers/${readerId}/loans`);
   return response.data;
-}
+};
 
-export const createReader = async(readerData: ReaderCreateDto) : Promise<ReaderDto> => {
-  const response = await axiosClient.post('/api/readers', readerData);
+export const createReader = async (
+  readerData: ReaderCreateDto,
+): Promise<ReaderDto> => {
+  const response = await axiosClient.post("/api/readers", readerData);
   return response.data;
 };
 
-export const updateReader = async(readerId:number, readerData: ReaderCreateDto) : Promise<ReaderDto> => {
-  const response = await axiosClient.put(`/api/readers/${readerId}`, readerData);
+export const updateReader = async (
+  readerId: number,
+  readerData: ReaderCreateDto,
+): Promise<ReaderDto> => {
+  const response = await axiosClient.put(
+    `/api/readers/${readerId}`,
+    readerData,
+  );
   return response.data;
 };
 
-export const deleteReader = async(readerId: number): Promise<void> => {
+export const deleteReader = async (readerId: number): Promise<void> => {
   await axiosClient.delete(`/api/readers/${readerId}`);
 };
-

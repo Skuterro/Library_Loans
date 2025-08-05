@@ -8,12 +8,12 @@ export const Routing = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Layout/>}>
-          <Route path="Books" element={<BooksPage/>}/>
-          <Route path="Readers" element={<ReadersPage/>}/>
-          <Route path="Loans" element={<LoansPage/>}/>
+        <Route path="/" element={<Layout />}>
+          <Route path="Books" element={<BooksPage />} />
+          <Route path="Readers" element={<ReadersPage />} />
+          <Route path="Loans" element={<LoansPage />} />
         </Route>
       </Routes>
     </Router>
-  )
-}
+  );
+};

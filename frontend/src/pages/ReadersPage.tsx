@@ -13,15 +13,15 @@ import { ChangePageUi } from "../components/ui/ChangePageUi";
 import { toast } from "react-hot-toast";
 
 export const ReadersPage = () => {
-  const[readers, setReaders] = useState<ReaderDto[]>([]);
-  const[isLoading, setIsLoading] = useState(true);
+  const [readers, setReaders] = useState<ReaderDto[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const[isCreateModalOpen, setIsCreateModalOpen] = useState(false);
-  const[isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
-  const[isReaderLoansModalOpen, setIsReaderLoansModalOpen] = useState(false);
-  const[isLoanBookModalOpen, setIsLoanBookModalOpen] = useState(false);
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [isReaderLoansModalOpen, setIsReaderLoansModalOpen] = useState(false);
+  const [isLoanBookModalOpen, setIsLoanBookModalOpen] = useState(false);
 
-  const[selectedReader, setSelectedReader] = useState<ReaderDto | null>(null);
+  const [selectedReader, setSelectedReader] = useState<ReaderDto | null>(null);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
@@ -32,7 +32,7 @@ export const ReadersPage = () => {
     setSelectedReader(reader || null);
     setIsCreateModalOpen(true);
   };
-  
+
   const handleCloseForm = () => {
     setSelectedReader(null);
     setIsCreateModalOpen(false);
@@ -43,15 +43,15 @@ export const ReadersPage = () => {
     setIsDeleteModalOpen(true);
   };
 
-  const handleOpenLoanBookModal = (reader: ReaderDto)=> {
+  const handleOpenLoanBookModal = (reader: ReaderDto) => {
     setSelectedReader(reader);
     setIsLoanBookModalOpen(true);
-  }
+  };
 
   const handleCloaseLoanBookModal = () => {
     setSelectedReader(null);
     setIsLoanBookModalOpen(false);
-  }
+  };
 
   const handleOpenLoansModal = (reader: ReaderDto) => {
     setSelectedReader(reader);
@@ -70,26 +70,30 @@ export const ReadersPage = () => {
   };
 
   const fetchReaders = useCallback(async (page: number, email: string) => {
-    try{
+    try {
       setIsLoading(true);
-      const data = await getAllReaders({ pageNumber: page, pageSize: 5, email: email});
+      const data = await getAllReaders({
+        pageNumber: page,
+        pageSize: 5,
+        email: email,
+      });
       setReaders(data.items);
       setTotalPages(data.totalPages);
-    }finally{
+    } finally {
       setIsLoading(false);
     }
-  }, [])
+  }, []);
 
-  const handleDelete = async() => {
-    if(!selectedReader){
+  const handleDelete = async () => {
+    if (!selectedReader) {
       return;
     }
-    try{
+    try {
       await deleteReader(selectedReader.id);
       toast.success("Reader successfully deleted!");
       setSelectedReader(null);
       fetchReaders(currentPage, debouncedEmail);
-    }finally{
+    } finally {
       setIsDeleteModalOpen(false);
     }
   };
@@ -99,7 +103,7 @@ export const ReadersPage = () => {
   }, [currentPage, debouncedEmail, fetchReaders]);
 
   useEffect(() => {
-    if(currentPage !== 1){
+    if (currentPage !== 1) {
       setCurrentPage(1);
     }
   }, [debouncedEmail]);
@@ -130,45 +134,47 @@ export const ReadersPage = () => {
       <div className="flex justify-center mt-12">
         {isLoading ? (
           <p className="text-2xl">Loading...</p>
+        ) : readers.length > 0 ? (
+          <ul className="space-y-2">
+            {readers.map((reader) => (
+              <ReaderItem
+                key={reader.id}
+                reader={reader}
+                onDelete={() => handleOpenDeleteModal(reader)}
+                onEdit={() => handleOpenForm(reader)}
+                onViewLoans={() => handleOpenLoansModal(reader)}
+                onLoanBook={() => handleOpenLoanBookModal(reader)}
+              />
+            ))}
+          </ul>
         ) : (
-          readers.length > 0 ? (
-            <ul className="space-y-2">
-              {readers.map((reader) => (
-                <ReaderItem 
-                  key={reader.id} 
-                  reader={reader}
-                  onDelete={() => handleOpenDeleteModal(reader)}
-                  onEdit={() => handleOpenForm(reader)}
-                  onViewLoans={() => handleOpenLoansModal(reader)}  
-                  onLoanBook={() => handleOpenLoanBookModal(reader)}
-                />
-              ))}
-            </ul>
-          ) : (
-            <p className="text-2xl">No data...</p>
-          )
+          <p className="text-2xl">No data...</p>
         )}
       </div>
       {readers.length > 0 && !isLoading && (
-        <ChangePageUi 
+        <ChangePageUi
           currentPage={currentPage}
           totalPages={totalPages}
-          handlePageChange={handlePageChange}  
+          handlePageChange={handlePageChange}
         />
       )}
 
       <Modal isOpen={isCreateModalOpen} onClose={handleCloseForm}>
-        <ReaderForm 
-          onClose={handleCloseForm} 
-          onReaderSaved={() => fetchReaders(currentPage, debouncedEmail)} 
-          readerToUpdate={selectedReader}/>
+        <ReaderForm
+          onClose={handleCloseForm}
+          onReaderSaved={() => fetchReaders(currentPage, debouncedEmail)}
+          readerToUpdate={selectedReader}
+        />
       </Modal>
 
-      <Modal isOpen={isDeleteModalOpen} onClose={() => setIsDeleteModalOpen(false)}>
+      <Modal
+        isOpen={isDeleteModalOpen}
+        onClose={() => setIsDeleteModalOpen(false)}
+      >
         <DeleteModal
           onClose={() => setIsDeleteModalOpen(false)}
           onConfirm={handleDelete}
-          message={'Delete this reader?'}
+          message={"Delete this reader?"}
         />
       </Modal>
 
@@ -180,9 +186,9 @@ export const ReadersPage = () => {
 
       {selectedReader && (
         <Modal isOpen={isLoanBookModalOpen} onClose={handleCloaseLoanBookModal}>
-          <LoanBookModal reader={selectedReader}/>
+          <LoanBookModal reader={selectedReader} />
         </Modal>
       )}
     </section>
-  )
-}
+  );
+};

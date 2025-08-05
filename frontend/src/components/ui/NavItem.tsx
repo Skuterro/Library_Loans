@@ -7,7 +7,7 @@ interface NavItemProps {
   icon: IconType;
 }
 
-export const NavItem = ({to, text, icon:Icon} : NavItemProps) => {
+export const NavItem = ({ to, text, icon: Icon }: NavItemProps) => {
   return (
     <NavLink
       to={to}
@@ -20,7 +20,7 @@ export const NavItem = ({to, text, icon:Icon} : NavItemProps) => {
       }
     >
       {text}
-      <Icon className="text-2xl"/>
+      <Icon className="text-2xl" />
     </NavLink>
-  )
-}
+  );
+};

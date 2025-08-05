@@ -4,13 +4,13 @@ import { Wrapper } from "./Wrapper";
 import { Toaster } from "react-hot-toast";
 
 export const Layout = () => (
-    <div className="bg-gray-800 text-gray-300 min-h-screen">
-      <Navbar />
-      <Wrapper>
-        <main className="flex-grow">
-            <Outlet />
-        </main>
-      </Wrapper>
-      <Toaster position="top-right"/>
-    </div>
-  );
+  <div className="bg-gray-800 text-gray-300 min-h-screen">
+    <Navbar />
+    <Wrapper>
+      <main className="flex-grow">
+        <Outlet />
+      </main>
+    </Wrapper>
+    <Toaster position="top-right" />
+  </div>
+);

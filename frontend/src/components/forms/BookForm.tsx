@@ -10,7 +10,11 @@ type BookFormProps = {
   bookToUpdate?: BookDto | null;
 };
 
-export const BookForm = ({ onClose, onBookSaved, bookToUpdate }: BookFormProps) => {
+export const BookForm = ({
+  onClose,
+  onBookSaved,
+  bookToUpdate,
+}: BookFormProps) => {
   const [formData, setFormData] = useState<BookCreateDto>({
     title: "",
     author: "",
@@ -27,9 +31,9 @@ export const BookForm = ({ onClose, onBookSaved, bookToUpdate }: BookFormProps) 
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-     e.preventDefault();
+    e.preventDefault();
 
-    if (!formData.title){
+    if (!formData.title) {
       toast.error("Title of the book is required!");
       return;
     }
@@ -45,9 +49,9 @@ export const BookForm = ({ onClose, onBookSaved, bookToUpdate }: BookFormProps) 
       }
       onBookSaved();
       onClose();
-      } finally {
-        setIsSubmitting(false);
-      }
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   useEffect(() => {
@@ -64,55 +68,61 @@ export const BookForm = ({ onClose, onBookSaved, bookToUpdate }: BookFormProps) 
         releaseYear: 0,
       });
     }
-}, [bookToUpdate]);
+  }, [bookToUpdate]);
 
   return (
-   <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4">
       <h2 className="text-2xl font-bold mb-4">
-        {bookToUpdate ? `Update ${bookToUpdate.title}` : 'Create new book'}
+        {bookToUpdate ? `Update ${bookToUpdate.title}` : "Create new book"}
       </h2>
       <div>
-        <label htmlFor="title" className="block text-sm font-medium">Title</label>
-          <input
-            type="text"
-            name="title"
-            id="title"
-            value={formData.title}
-            onChange={handleChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-lg focus:border-blue-500 focus:ring-blue-500"
-          />
+        <label htmlFor="title" className="block text-sm font-medium">
+          Title
+        </label>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          value={formData.title}
+          onChange={handleChange}
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-lg focus:border-blue-500 focus:ring-blue-500"
+        />
       </div>
       <div>
-        <label htmlFor="author" className="block text-sm font-medium">Author</label>
-          <input
-            type="text"
-            name="author"
-            id="author"
-            value={formData.author}
-            onChange={handleChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-lg focus:border-blue-500 focus:ring-blue-500"
-            />
-        </div>
-        <div>
-          <label htmlFor="releaseYear" className="block text-sm font-medium">Release year</label>
-            <input
-              type="number"
-              name="releaseYear"
-              id="releaseYear"
-              value={formData.releaseYear}
-               onChange={handleChange}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-lg focus:border-blue-500 focus:ring-blue-500"
-            />
-        </div>
-        <div className="flex justify-end gap-2 mt-6">
-          <button
-            type="submit"
-            className="px-4 py-2 font-bold text-white bg-blue-500 rounded-md hover:bg-blue-600 transition-colors"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "Saving..." : "Save"}
-          </button>
-          </div>
-      </form>
+        <label htmlFor="author" className="block text-sm font-medium">
+          Author
+        </label>
+        <input
+          type="text"
+          name="author"
+          id="author"
+          value={formData.author}
+          onChange={handleChange}
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-lg focus:border-blue-500 focus:ring-blue-500"
+        />
+      </div>
+      <div>
+        <label htmlFor="releaseYear" className="block text-sm font-medium">
+          Release year
+        </label>
+        <input
+          type="number"
+          name="releaseYear"
+          id="releaseYear"
+          value={formData.releaseYear}
+          onChange={handleChange}
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-lg focus:border-blue-500 focus:ring-blue-500"
+        />
+      </div>
+      <div className="flex justify-end gap-2 mt-6">
+        <button
+          type="submit"
+          className="px-4 py-2 font-bold text-white bg-blue-500 rounded-md hover:bg-blue-600 transition-colors"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? "Saving..." : "Save"}
+        </button>
+      </div>
+    </form>
   );
 };

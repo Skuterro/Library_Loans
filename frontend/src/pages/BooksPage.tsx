@@ -11,14 +11,14 @@ import { ChangePageUi } from "../components/ui/ChangePageUi";
 import { toast } from "react-hot-toast";
 
 export const BooksPage = () => {
-  const[books, setBooks] = useState<BookDto[]>([]);
-  const[isLoading, setIsLoading] = useState(true);
+  const [books, setBooks] = useState<BookDto[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const[isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
-  const[isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
 
-  const[bookToDelete, setBookToDelete] = useState<number | null>(null);
-  const[bookToUpdate, setBookToUpdate] = useState<BookDto | null>(null);
+  const [bookToDelete, setBookToDelete] = useState<number | null>(null);
+  const [bookToUpdate, setBookToUpdate] = useState<BookDto | null>(null);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
@@ -28,7 +28,7 @@ export const BooksPage = () => {
   const handleOpenForm = (book?: BookDto) => {
     setBookToUpdate(book || null);
     setIsCreateModalOpen(true);
-  }
+  };
 
   const handlePageChange = (newPage: number) => {
     if (newPage > 0 && newPage <= totalPages) {
@@ -39,46 +39,50 @@ export const BooksPage = () => {
   const handleCloseForm = () => {
     setBookToUpdate(null);
     setIsCreateModalOpen(false);
-  }
+  };
 
   const handleDeleteModalOpen = () => setIsDeleteModalOpen((curr) => !curr);
 
   const openDeleteModal = (bookId: number) => {
     setBookToDelete(bookId);
     handleDeleteModalOpen();
-  }
+  };
 
   const fetchBooks = useCallback(async (page: number, title: string) => {
-    try{
+    try {
       setIsLoading(true);
-      const data = await getAllBooks({ pageNumber: page, pageSize: 5, title: title});
+      const data = await getAllBooks({
+        pageNumber: page,
+        pageSize: 5,
+        title: title,
+      });
       setBooks(data.items);
       setTotalPages(data.totalPages);
-    }finally{
+    } finally {
       setIsLoading(false);
     }
-  },[]);
+  }, []);
 
-  const handleDelete = async() => {
-    if(!bookToDelete){
+  const handleDelete = async () => {
+    if (!bookToDelete) {
       return;
     }
-    try{
+    try {
       await deleteBook(bookToDelete);
       toast.success("Book successfully deleted!");
       setBookToDelete(null);
       fetchBooks(currentPage, debouncedTitle);
-    }finally{
+    } finally {
       handleDeleteModalOpen();
     }
-  }
+  };
 
   useEffect(() => {
     fetchBooks(currentPage, debouncedTitle);
   }, [currentPage, debouncedTitle, fetchBooks]);
 
   useEffect(() => {
-    if(currentPage !== 1){
+    if (currentPage !== 1) {
       setCurrentPage(1);
     }
   }, [debouncedTitle]);
@@ -109,45 +113,44 @@ export const BooksPage = () => {
       <div className="flex justify-center mt-12">
         {isLoading ? (
           <p className="text-2xl">Loading...</p>
+        ) : books.length > 0 ? (
+          <ul className="space-y-2">
+            {books.map((book) => (
+              <BookItem
+                key={book.id}
+                book={book}
+                onDelete={() => openDeleteModal(book.id)}
+                onEdit={() => handleOpenForm(book)}
+              />
+            ))}
+          </ul>
         ) : (
-          books.length > 0 ? (
-            <ul className="space-y-2">
-              {books.map((book) => (
-                <BookItem 
-                  key={book.id}
-                  book={book}
-                  onDelete={() => openDeleteModal(book.id)}
-                  onEdit={() => handleOpenForm(book)}
-                />
-              ))}
-            </ul>
-          ) : (
-            <p className="text-2xl">No data...</p>
-          )
+          <p className="text-2xl">No data...</p>
         )}
       </div>
       {books.length > 0 && !isLoading && (
-        <ChangePageUi 
+        <ChangePageUi
           currentPage={currentPage}
           totalPages={totalPages}
-          handlePageChange={handlePageChange}  
+          handlePageChange={handlePageChange}
         />
-      )}      
+      )}
 
       <Modal isOpen={isCreateModalOpen} onClose={handleCloseForm}>
         <BookForm
-          onClose={handleCloseForm} 
-          onBookSaved={() => fetchBooks(currentPage, debouncedTitle)} 
-          bookToUpdate={bookToUpdate}/>
-      </Modal>      
+          onClose={handleCloseForm}
+          onBookSaved={() => fetchBooks(currentPage, debouncedTitle)}
+          bookToUpdate={bookToUpdate}
+        />
+      </Modal>
 
       <Modal isOpen={isDeleteModalOpen} onClose={handleDeleteModalOpen}>
         <DeleteModal
           onClose={handleDeleteModalOpen}
           onConfirm={handleDelete}
-          message={'Delete this book?'}
+          message={"Delete this book?"}
         />
-      </Modal>            
+      </Modal>
     </section>
-  )
-}
+  );
+};

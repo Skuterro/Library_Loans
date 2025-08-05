@@ -1,4 +1,4 @@
-import type { BookDto } from "../models/book/BookDto"
+import type { BookDto } from "../models/book/BookDto";
 import type { BookCreateDto } from "../models/book/BookCreateDto";
 import type { SimpleBookDto } from "../models/book/SimpleBookDto";
 import type { PagedResult } from "../models/PagedResult";
@@ -11,7 +11,7 @@ interface BookQueryParams {
 }
 
 export const getAllBooks = async (
-  params: BookQueryParams
+  params: BookQueryParams,
 ): Promise<PagedResult<BookDto>> => {
   const query = new URLSearchParams();
 
@@ -30,20 +30,23 @@ export const getAllBooks = async (
 };
 
 export const getAvailableBooks = async (): Promise<SimpleBookDto[]> => {
-  const response = await axiosClient.get('/api/books/available');
+  const response = await axiosClient.get("/api/books/available");
   return response.data;
 };
 
-export const createBook = async(bookData: BookCreateDto) : Promise<BookDto> => {
-  const response = await axiosClient.post('/api/books', bookData);
+export const createBook = async (bookData: BookCreateDto): Promise<BookDto> => {
+  const response = await axiosClient.post("/api/books", bookData);
   return response.data;
 };
 
-export const updateBook = async(bookId: number, bookData: BookCreateDto) : Promise<BookDto> => {
+export const updateBook = async (
+  bookId: number,
+  bookData: BookCreateDto,
+): Promise<BookDto> => {
   const response = await axiosClient.put(`/api/books/${bookId}`, bookData);
   return response.data;
-}
+};
 
-export const deleteBook = async(bookId: number): Promise<void> => {
+export const deleteBook = async (bookId: number): Promise<void> => {
   await axiosClient.delete(`/api/books/${bookId}`);
 };
