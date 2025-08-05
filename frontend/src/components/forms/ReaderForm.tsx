@@ -33,7 +33,7 @@ export const ReaderForm = ({
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.lastName || !formData.email) {
+    if (!formData.name.trim() || !formData.lastName.trim() || !formData.email.trim()) {
       toast.error("All fields are required!");
       return;
     }

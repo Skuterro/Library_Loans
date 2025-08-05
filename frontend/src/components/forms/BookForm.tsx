@@ -33,7 +33,7 @@ export const BookForm = ({
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!formData.title) {
+    if (!formData.title.trim()) {
       toast.error("Title of the book is required!");
       return;
     }
