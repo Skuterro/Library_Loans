@@ -11,24 +11,21 @@ namespace Backend.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Books_Clients_ClientId",
-                table: "Books");
-
-            migrationBuilder.DropTable(
-                name: "Clients");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Books_ClientId",
-                table: "Books");
-
-            migrationBuilder.DropColumn(
-                name: "ClientId",
-                table: "Books");
-
-            migrationBuilder.DropColumn(
-                name: "LoanDate",
-                table: "Books");
+            migrationBuilder.CreateTable(
+                name: "Books",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Title = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
+                    Author = table.Column<string>(type: "TEXT", maxLength: 100, nullable: true),
+                    ReleaseYear = table.Column<short>(type: "INTEGER", nullable: true),
+                    IsArchieved = table.Column<bool>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Books", x => x.Id);
+                });
 
             migrationBuilder.CreateTable(
                 name: "Readers",
@@ -38,7 +35,8 @@ namespace Backend.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    Email = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false)
+                    Email = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
+                    IsArchieved = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -64,14 +62,20 @@ namespace Backend.Migrations
                         column: x => x.BookId,
                         principalTable: "Books",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Loans_Readers_ReaderId",
                         column: x => x.ReaderId,
                         principalTable: "Readers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Books_Title",
+                table: "Books",
+                column: "Title",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Loans_BookId",
@@ -97,59 +101,10 @@ namespace Backend.Migrations
                 name: "Loans");
 
             migrationBuilder.DropTable(
+                name: "Books");
+
+            migrationBuilder.DropTable(
                 name: "Readers");
-
-            migrationBuilder.AddColumn<int>(
-                name: "ClientId",
-                table: "Books",
-                type: "INTEGER",
-                nullable: true);
-
-            migrationBuilder.AddColumn<DateTime>(
-                name: "LoanDate",
-                table: "Books",
-                type: "TEXT",
-                nullable: true);
-
-            migrationBuilder.CreateTable(
-                name: "Clients",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Email = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    LastName = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    Name = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Clients", x => x.Id);
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Books_ClientId",
-                table: "Books",
-                column: "ClientId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Clients_Email",
-                table: "Clients",
-                column: "Email",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Clients_LastName",
-                table: "Clients",
-                column: "LastName",
-                unique: true);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Books_Clients_ClientId",
-                table: "Books",
-                column: "ClientId",
-                principalTable: "Clients",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.SetNull);
         }
     }
 }

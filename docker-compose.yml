@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./Backend
+    ports:
+      - "5138:5138"
+    volumes:
+      - ./Backend/Database:/app/Database
+    environment:
+      - ASPNETCORE_URLS=http://+:5138
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: always
