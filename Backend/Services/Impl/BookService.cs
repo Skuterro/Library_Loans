@@ -67,12 +67,6 @@ namespace Backend.Services.Impl
         }
         public async Task<SimpleBookResponseDto> CreateBookAsync(BookCreateDto bookDto)
         {
-            bool titleExists = await _context.Books.AnyAsync(c => c.Title == bookDto.Title);
-            if (titleExists)
-            {
-                throw new BadRequestException("This title is in database.");
-            }
-
             var bookEntity = _mapper.Map<Book>(bookDto);
             _context.Books.Add(bookEntity);
             await _context.SaveChangesAsync();
@@ -92,15 +86,6 @@ namespace Backend.Services.Impl
             if (bookToUpdate.IsArchieved)
             {
                 throw new BadRequestException("This book is archieved.");
-            }
-
-            if (bookToUpdate.Title != updateDto.Title)
-            {
-                bool titleExists = await _context.Books.AnyAsync(c => c.Title == updateDto.Title);
-                if (titleExists)
-                {
-                    throw new BadRequestException("This title is in database.");
-                }
             }
 
             _mapper.Map(updateDto, bookToUpdate);
