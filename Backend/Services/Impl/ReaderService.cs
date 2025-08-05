@@ -3,6 +3,8 @@ using Backend.Data;
 using Backend.Exceptions;
 using Backend.Models.Entities;
 using Backend.Models.Requests.ClientRequests;
+using Backend.Models.Requests.QueryParams;
+using Backend.Models.Responses;
 using Backend.Models.Responses.BookResponses;
 using Backend.Models.Responses.ClientResponses;
 using Backend.Models.Responses.LoanResponses;
@@ -21,10 +23,26 @@ namespace Backend.Services.Impl
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<ReaderResponseDto>> GetAllReadersAsync()
+        public async Task<PagedResult<ReaderResponseDto>> GetAllReadersAsync(ReaderQueryParameters query)
         {
-            var readers = await _context.Readers.ToListAsync();
-            return _mapper.Map<IEnumerable<ReaderResponseDto>>(readers);
+            var baseQuery = _context.Readers.Where(r => r.IsArchieved == false).AsQueryable();
+
+            if (!string.IsNullOrEmpty(query.Email))
+            {
+                baseQuery = baseQuery.Where(c => EF.Functions.Like(c.Email, $"%{query.Email}%"));
+            }
+
+            var totalItemsCount = await baseQuery.CountAsync();
+
+            var readers = await baseQuery
+                .Skip(query.PageSize * (query.PageNumber - 1))
+                .Take(query.PageSize)
+                .ToListAsync();
+
+            var readersDto = _mapper.Map<List<ReaderResponseDto>>(readers);
+            var pagedResult = new PagedResult<ReaderResponseDto>(readersDto, totalItemsCount, query.PageNumber, query.PageSize);
+
+            return pagedResult;
         }
 
         public async Task<IEnumerable<LoanResponseDto>> GetReaderLoansAsync(int id)
@@ -36,26 +54,9 @@ namespace Backend.Services.Impl
             return _mapper.Map<IEnumerable<LoanResponseDto>>(activeLoans);
         }
 
-        public async Task<IEnumerable<SimpleBookResponseDto>> GetReaderBooksAsync(int id)
-        {
-            var reader = await _context.Readers
-                                        .Include(r => r.Loans.Where(l => l.ReturnDate == null))
-                                        .ThenInclude(l => l.Book)
-                                        .FirstOrDefaultAsync(r => r.Id == id);
-
-            if (reader == null)
-            {
-                throw new NotFoundException($"Reader with ID {id} not found.");
-            }
-
-            var loanedBooks = reader.Loans.Select(l => l.Book).ToList();
-
-            return _mapper.Map<IEnumerable<SimpleBookResponseDto>>(loanedBooks);
-        }
-
         public async Task<ReaderResponseDto> GetReaderByIdAsync(int id)
         {
-            var reader = await _context.Readers.FirstOrDefaultAsync(a => a.Id == id);
+            var reader = await _context.Readers.Where(r => r.IsArchieved == false).FirstOrDefaultAsync(r => r.Id == id);
 
             if (reader == null)
             {
@@ -91,6 +92,11 @@ namespace Backend.Services.Impl
                 throw new NotFoundException($"Client with ID {id} does not exist.");
             }
 
+            if (readerToUpdate.IsArchieved)
+            {
+                throw new BadRequestException("This reader is archieved.");
+            }
+
             if (readerToUpdate.Email != updateDto.Email)
             {
                 bool emailExists = await _context.Readers.AnyAsync(c => c.Email == updateDto.Email);
@@ -107,14 +113,27 @@ namespace Backend.Services.Impl
 
         public async Task DeleteReaderAsync(int id)
         {
-            var readerToDelete = await _context.Readers.FindAsync(id);
+            var readerToDelete = await _context.Readers.Include(r => r.Loans).FirstOrDefaultAsync(r => r.Id == id);
             
             if(readerToDelete == null)
             {
                 throw new NotFoundException($"Client with ID {id} does not exist.");
             }
 
-            _context.Readers.Remove(readerToDelete);
+            if (readerToDelete.Loans.Any(l => l.ReturnDate == null))
+            {
+                throw new BadRequestException("Cannot delete a reader with active loans.");
+            }
+
+            if (readerToDelete.Loans.Any())
+            {
+                readerToDelete.IsArchieved = true;
+            }
+            else
+            {
+                _context.Readers.Remove(readerToDelete);
+            }
+
             await _context.SaveChangesAsync();
         }
 

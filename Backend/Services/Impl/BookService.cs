@@ -4,6 +4,8 @@ using Backend.Exceptions;
 using Backend.Models.Entities;
 using Backend.Models.Requests.BookRequests;
 using Backend.Models.Requests.LoanRequests;
+using Backend.Models.Requests.QueryParams;
+using Backend.Models.Responses;
 using Backend.Models.Responses.BookResponses;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,25 +22,41 @@ namespace Backend.Services.Impl
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<BookResponseDto>> GetAllBooksAsync()
+        public async Task<PagedResult<BookResponseDto>> GetAllBooksAsync(BookQueryParameters query)
         {
-            var books = await _context.Books
-                                    .Include(b => b.Loans.Where(l => l.ReturnDate == null))
-                                    .ThenInclude(l => l.Reader)
-                                    .ToListAsync();
+            var baseQuery = _context.Books
+                .Where(b => b.IsArchieved == false)
+                .Include(b => b.Loans.Where(l => l.ReturnDate == null))
+                .ThenInclude(l => l.Reader)
+                .AsQueryable();
 
-            return _mapper.Map<IEnumerable<BookResponseDto>>(books);
+            if (!string.IsNullOrEmpty(query.Title))
+            {
+                baseQuery = baseQuery.Where(b => EF.Functions.Like(b.Title, $"%{query.Title}%"));
+            }
+
+            var totalItemsCount = await baseQuery.CountAsync();
+
+            var books = await baseQuery
+                .Skip(query.PageSize * (query.PageNumber - 1))
+                .Take(query.PageSize)
+                .ToListAsync();
+
+            var booksDto = _mapper.Map<List<BookResponseDto>>(books);
+            var pagedResult = new PagedResult<BookResponseDto>(booksDto, totalItemsCount, query.PageNumber, query.PageSize);
+
+            return pagedResult;
         }
 
         public async Task<IEnumerable<SimpleBookResponseDto>> GetAvailableBooksAsync()
         {
-            var availableBooks = await _context.Books.Where(b => !b.Loans.Any(l => l.ReturnDate == null)).ToListAsync();
+            var availableBooks = await _context.Books.Where(b => !b.IsArchieved && !b.Loans.Any(l => l.ReturnDate == null)).ToListAsync();
             return _mapper.Map<IEnumerable<SimpleBookResponseDto>>(availableBooks);
         }
 
         public async Task<SimpleBookResponseDto> GetBookByIdAsync(int id)
         {
-            var book = await _context.Books.FirstOrDefaultAsync(b => b.Id == id);
+            var book = await _context.Books.Where(b => b.IsArchieved == false).FirstOrDefaultAsync(b => b.Id == id);
 
             if(book == null)
             {
@@ -71,6 +89,11 @@ namespace Backend.Services.Impl
                 throw new NotFoundException($"Book with ID {id} does not exist.");
             }
 
+            if (bookToUpdate.IsArchieved)
+            {
+                throw new BadRequestException("This book is archieved.");
+            }
+
             if (bookToUpdate.Title != updateDto.Title)
             {
                 bool titleExists = await _context.Books.AnyAsync(c => c.Title == updateDto.Title);
@@ -87,14 +110,27 @@ namespace Backend.Services.Impl
 
         public async Task DeleteBookAsync(int id)
         {
-            var book = await _context.Books.FindAsync(id);
+            var bookToRemove = await _context.Books.Include(b => b.Loans).FirstOrDefaultAsync(b => b.Id == id);
             
-            if(book == null)
+            if(bookToRemove == null)
             {
                 throw new NotFoundException($"Book with ID {id} does not exist.");
             }
 
-            _context.Books.Remove(book);
+            if (bookToRemove.Loans.Any(l => l.ReturnDate == null))
+            {
+                throw new BadRequestException("Cannot delete a book that is currently loaned out.");
+            }
+
+            if (bookToRemove.Loans.Any())
+            {
+                bookToRemove.IsArchieved = true;
+            }
+            else
+            {
+                _context.Books.Remove(bookToRemove);
+            }
+
             await _context.SaveChangesAsync();
         }
 

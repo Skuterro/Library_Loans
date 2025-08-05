@@ -3,12 +3,52 @@
   "WorkspaceRootPath": "D:\\code\\zadanie rekrutacyjne\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\controllers\\readerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:controllers\\readerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\services\\impl\\readerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\impl\\readerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\services\\impl\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\impl\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\entities\\reader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\entities\\reader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\database\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:database\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\controllers\\loanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:controllers\\loanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\responses\\loanresponses\\loanresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\responses\\loanresponses\\loanresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\services\\impl\\loanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\impl\\loanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\services\\iloanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\iloanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\entities\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\entities\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\controllers\\readerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:controllers\\readerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\services\\ireaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,56 +59,28 @@
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\services\\iloanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\iloanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\services\\impl\\loanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\impl\\loanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\mapper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:mapper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\responses\\loanresponses\\loanresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\responses\\loanresponses\\loanresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\entities\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\entities\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\responses\\bookresponses\\bookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\responses\\bookresponses\\bookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\services\\impl\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:services\\impl\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\controllers\\loanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:controllers\\loanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\responses\\readerresponses\\readerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\responses\\readerresponses\\readerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\responses\\bookresponses\\simplebookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\responses\\bookresponses\\simplebookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\responses\\bookresponses\\bookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\responses\\bookresponses\\bookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\requests\\readerrequests\\readerupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\requests\\readerrequests\\readerupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\requests\\readerrequests\\readercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\requests\\readerrequests\\readercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\requests\\loanrequests\\loanbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\requests\\loanrequests\\loanbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\responses\\readerresponses\\readerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\responses\\readerresponses\\readerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\requests\\bookrequests\\bookupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,12 +91,12 @@
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\requests\\bookrequests\\bookcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\database\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:database\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\mapper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:mapper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -103,18 +115,6 @@
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\database\\migrations\\20250731132508_update0003.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:database\\migrations\\20250731132508_update0003.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\database\\migrations\\20250730192500_update0002.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:database\\migrations\\20250730192500_update0002.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\database\\migrations\\20250730192047_update0001.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:database\\migrations\\20250730192047_update0001.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|d:\\code\\zadanie rekrutacyjne\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{3985AB37-3625-4820-87E5-912F082BEEEF}|Backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
@@ -125,42 +125,126 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 214,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Loan.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Loan.cs",
-              "RelativeDocumentMoniker": "Models\\Entities\\Loan.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Loan.cs",
-              "RelativeToolTip": "Models\\Entities\\Loan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\IBookService.cs",
+              "RelativeDocumentMoniker": "Services\\IBookService.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\IBookService.cs",
+              "RelativeToolTip": "Services\\IBookService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T17:25:54.616Z",
+              "WhenOpened": "2025-08-04T16:03:55.379Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BookResponseDto.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\BookResponses\\BookResponseDto.cs",
-              "RelativeDocumentMoniker": "Models\\Responses\\BookResponses\\BookResponseDto.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\BookResponses\\BookResponseDto.cs",
-              "RelativeToolTip": "Models\\Responses\\BookResponses\\BookResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\BookService.cs",
+              "RelativeDocumentMoniker": "Services\\Impl\\BookService.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\BookService.cs",
+              "RelativeToolTip": "Services\\Impl\\BookService.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAkwFsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T16:04:20.781Z",
+              "WhenOpened": "2025-08-04T16:04:17.142Z",
               "EditorCaption": ""
             },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ReadersController.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\ReadersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReadersController.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\ReadersController.cs",
+              "RelativeToolTip": "Controllers\\ReadersController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T16:45:12.923Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 186,
+          "SelectedChildIndex": 3,
+          "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
+              "Title": "LoansController.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\LoansController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoansController.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\LoansController.cs",
+              "RelativeToolTip": "Controllers\\LoansController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T15:48:34.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Database\\AppDbContext.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\AppDbContext.cs",
+              "RelativeToolTip": "Database\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T11:08:03.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReaderService.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\ReaderService.cs",
+              "RelativeDocumentMoniker": "Services\\Impl\\ReaderService.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\ReaderService.cs",
+              "RelativeToolTip": "Services\\Impl\\ReaderService.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAswFwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T17:09:02.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Book.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Book.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Book.cs",
+              "RelativeToolTip": "Models\\Entities\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T13:22:51.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Reader.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Reader.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Reader.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Reader.cs",
+              "RelativeToolTip": "Models\\Entities\\Reader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T20:11:24.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "LoanResponseDto.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\LoanResponses\\LoanResponseDto.cs",
               "RelativeDocumentMoniker": "Models\\Responses\\LoanResponses\\LoanResponseDto.cs",
@@ -173,137 +257,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ReadersController.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\ReadersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReadersController.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\ReadersController.cs",
-              "RelativeToolTip": "Controllers\\ReadersController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwEYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T16:45:12.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IBookService.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\IBookService.cs",
-              "RelativeDocumentMoniker": "Services\\IBookService.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\IBookService.cs",
-              "RelativeToolTip": "Services\\IBookService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T16:03:55.379Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BookService.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\BookService.cs",
-              "RelativeDocumentMoniker": "Services\\Impl\\BookService.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\BookService.cs",
-              "RelativeToolTip": "Services\\Impl\\BookService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBoAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T16:04:17.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "LoanService.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\LoanService.cs",
               "RelativeDocumentMoniker": "Services\\Impl\\LoanService.cs",
               "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\LoanService.cs",
               "RelativeToolTip": "Services\\Impl\\LoanService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAwBUAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwCQAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-04T14:16:32.138Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReaderService.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\ReaderService.cs",
-              "RelativeDocumentMoniker": "Services\\Impl\\ReaderService.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\Impl\\ReaderService.cs",
-              "RelativeToolTip": "Services\\Impl\\ReaderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T17:09:02.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MappingProfiles.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Mapper\\MappingProfiles.cs",
-              "RelativeDocumentMoniker": "Mapper\\MappingProfiles.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Mapper\\MappingProfiles.cs",
-              "RelativeToolTip": "Mapper\\MappingProfiles.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAmwBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T15:46:29.761Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ILoanService.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\ILoanService.cs",
-              "RelativeDocumentMoniker": "Services\\ILoanService.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\ILoanService.cs",
-              "RelativeToolTip": "Services\\ILoanService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T14:16:25.701Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IReaderService.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\IReaderService.cs",
-              "RelativeDocumentMoniker": "Services\\IReaderService.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\IReaderService.cs",
-              "RelativeToolTip": "Services\\IReaderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T14:35:57.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
               "Title": "BooksController.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\BooksController.cs",
               "RelativeDocumentMoniker": "Controllers\\BooksController.cs",
               "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\BooksController.cs",
               "RelativeToolTip": "Controllers\\BooksController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAkwDoAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-04T16:10:58.824Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LoansController.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\LoansController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LoansController.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Controllers\\LoansController.cs",
-              "RelativeToolTip": "Controllers\\LoansController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCsAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "ILoanService.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\ILoanService.cs",
+              "RelativeDocumentMoniker": "Services\\ILoanService.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\ILoanService.cs",
+              "RelativeToolTip": "Services\\ILoanService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T15:48:34.354Z",
+              "WhenOpened": "2025-08-04T14:16:25.701Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 10,
+              "Title": "Loan.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Loan.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Loan.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Loan.cs",
+              "RelativeToolTip": "Models\\Entities\\Loan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T17:25:54.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IReaderService.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\IReaderService.cs",
+              "RelativeDocumentMoniker": "Services\\IReaderService.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Services\\IReaderService.cs",
+              "RelativeToolTip": "Services\\IReaderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T14:35:57.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "SimpleBookResponseDto.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\BookResponses\\SimpleBookResponseDto.cs",
               "RelativeDocumentMoniker": "Models\\Responses\\BookResponses\\SimpleBookResponseDto.cs",
@@ -311,38 +330,11 @@
               "RelativeToolTip": "Models\\Responses\\BookResponses\\SimpleBookResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T15:02:12.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T15:02:12.335Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T14:20:08.487Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "LoanBookDto.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\LoanRequests\\LoanBookDto.cs",
-              "RelativeDocumentMoniker": "Models\\Requests\\LoanRequests\\LoanBookDto.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\LoanRequests\\LoanBookDto.cs",
-              "RelativeToolTip": "Models\\Requests\\LoanRequests\\LoanBookDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T14:45:32.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
               "Title": "ReaderResponseDto.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\ReaderResponses\\ReaderResponseDto.cs",
               "RelativeDocumentMoniker": "Models\\Responses\\ReaderResponses\\ReaderResponseDto.cs",
@@ -350,25 +342,47 @@
               "RelativeToolTip": "Models\\Responses\\ReaderResponses\\ReaderResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T14:38:56.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-04T14:38:56.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BookResponseDto.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\BookResponses\\BookResponseDto.cs",
+              "RelativeDocumentMoniker": "Models\\Responses\\BookResponses\\BookResponseDto.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Responses\\BookResponses\\BookResponseDto.cs",
+              "RelativeToolTip": "Models\\Responses\\BookResponses\\BookResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T16:04:20.781Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "BookUpdateDto.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\BookRequests\\BookUpdateDto.cs",
-              "RelativeDocumentMoniker": "Models\\Requests\\BookRequests\\BookUpdateDto.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\BookRequests\\BookUpdateDto.cs",
-              "RelativeToolTip": "Models\\Requests\\BookRequests\\BookUpdateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Title": "ReaderUpdateDto.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\ReaderRequests\\ReaderUpdateDto.cs",
+              "RelativeDocumentMoniker": "Models\\Requests\\ReaderRequests\\ReaderUpdateDto.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\ReaderRequests\\ReaderUpdateDto.cs",
+              "RelativeToolTip": "Models\\Requests\\ReaderRequests\\ReaderUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T14:47:58.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-04T20:12:14.235Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
+              "Title": "ReaderCreateDto.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\ReaderRequests\\ReaderCreateDto.cs",
+              "RelativeDocumentMoniker": "Models\\Requests\\ReaderRequests\\ReaderCreateDto.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\ReaderRequests\\ReaderCreateDto.cs",
+              "RelativeToolTip": "Models\\Requests\\ReaderRequests\\ReaderCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T20:12:11.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "BookCreateDto.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\BookRequests\\BookCreateDto.cs",
               "RelativeDocumentMoniker": "Models\\Requests\\BookRequests\\BookCreateDto.cs",
@@ -376,25 +390,59 @@
               "RelativeToolTip": "Models\\Requests\\BookRequests\\BookCreateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T16:39:42.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T16:39:42.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BookUpdateDto.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\BookRequests\\BookUpdateDto.cs",
+              "RelativeDocumentMoniker": "Models\\Requests\\BookRequests\\BookUpdateDto.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\BookRequests\\BookUpdateDto.cs",
+              "RelativeToolTip": "Models\\Requests\\BookRequests\\BookUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T14:47:58.391Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Database\\AppDbContext.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\AppDbContext.cs",
-              "RelativeToolTip": "Database\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAmAAAAAAAAAA==",
+              "Title": "LoanBookDto.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\LoanRequests\\LoanBookDto.cs",
+              "RelativeDocumentMoniker": "Models\\Requests\\LoanRequests\\LoanBookDto.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Requests\\LoanRequests\\LoanBookDto.cs",
+              "RelativeToolTip": "Models\\Requests\\LoanRequests\\LoanBookDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T11:08:03.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-04T14:45:32.169Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
+              "Title": "MappingProfiles.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Mapper\\MappingProfiles.cs",
+              "RelativeDocumentMoniker": "Mapper\\MappingProfiles.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Mapper\\MappingProfiles.cs",
+              "RelativeToolTip": "Mapper\\MappingProfiles.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAmwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T15:46:29.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T14:20:08.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "ExceptionHandlingMiddleware.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Middleware\\ExceptionHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "Middleware\\ExceptionHandlingMiddleware.cs",
@@ -406,20 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Book.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Book.cs",
-              "RelativeDocumentMoniker": "Models\\Entities\\Book.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Models\\Entities\\Book.cs",
-              "RelativeToolTip": "Models\\Entities\\Book.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T13:22:51.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "BadRequestException.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Exceptions\\BadRequestException.cs",
               "RelativeDocumentMoniker": "Exceptions\\BadRequestException.cs",
@@ -431,7 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "NotFoundException.cs",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Exceptions\\NotFoundException.cs",
               "RelativeDocumentMoniker": "Exceptions\\NotFoundException.cs",
@@ -443,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -452,42 +487,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-07-30T13:04:25.262Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "20250731132508_update0003.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\Migrations\\20250731132508_update0003.cs",
-              "RelativeDocumentMoniker": "Database\\Migrations\\20250731132508_update0003.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\Migrations\\20250731132508_update0003.cs",
-              "RelativeToolTip": "Database\\Migrations\\20250731132508_update0003.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T13:25:35.993Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "20250730192500_update0002.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\Migrations\\20250730192500_update0002.cs",
-              "RelativeDocumentMoniker": "Database\\Migrations\\20250730192500_update0002.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\Migrations\\20250730192500_update0002.cs",
-              "RelativeToolTip": "Database\\Migrations\\20250730192500_update0002.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T13:24:58.928Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "20250730192047_update0001.cs",
-              "DocumentMoniker": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\Migrations\\20250730192047_update0001.cs",
-              "RelativeDocumentMoniker": "Database\\Migrations\\20250730192047_update0001.cs",
-              "ToolTip": "D:\\code\\zadanie rekrutacyjne\\Backend\\Database\\Migrations\\20250730192047_update0001.cs",
-              "RelativeToolTip": "Database\\Migrations\\20250730192047_update0001.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T13:24:54.71Z"
             },
             {
               "$type": "Document",

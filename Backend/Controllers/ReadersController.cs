@@ -1,5 +1,7 @@
 ﻿using Backend.Models.Entities;
 using Backend.Models.Requests.ClientRequests;
+using Backend.Models.Requests.QueryParams;
+using Backend.Models.Responses;
 using Backend.Models.Responses.BookResponses;
 using Backend.Models.Responses.ClientResponses;
 using Backend.Services;
@@ -9,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Backend.Controllers
 {
     [ApiController]
-    [Route("[Controller]")]
+    [Route("api/readers")]
     public class ReadersController : ControllerBase
     {
         private readonly IReaderService _readerService;
@@ -20,9 +22,9 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ReaderResponseDto>>> GetAllReaders()
+        public async Task<ActionResult<PagedResult<ReaderResponseDto>>> GetAllReaders([FromQuery] ReaderQueryParameters query)
         {
-            var readers = await _readerService.GetAllReadersAsync();
+            var readers = await _readerService.GetAllReadersAsync(query);
             return Ok(readers);
         }
 
@@ -33,12 +35,6 @@ namespace Backend.Controllers
             return Ok(loans);
         }
 
-        [HttpGet("{id}/books")]
-        public async Task<ActionResult<IEnumerable<SimpleBookResponseDto>>> GetReaderBooks([FromRoute] int id)
-        {
-            var books = await _readerService.GetReaderBooksAsync(id);
-            return Ok(books);
-        }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<ReaderResponseDto>> GetReaderById([FromRoute] int id)

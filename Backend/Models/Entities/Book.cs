@@ -17,5 +17,7 @@ namespace Backend.Models.Entities
         public short? ReleaseYear { get; set; }
 
         public ICollection<Loan> Loans { get; set; } = new List<Loan>();
+
+        public bool IsArchieved { get; set; }
     }
 }

@@ -3,6 +3,8 @@ using Backend.Data;
 using Backend.Exceptions;
 using Backend.Models.Entities;
 using Backend.Models.Requests.LoanRequests;
+using Backend.Models.Requests.QueryParams;
+using Backend.Models.Responses;
 using Backend.Models.Responses.BookResponses;
 using Backend.Models.Responses.LoanResponses;
 using Microsoft.EntityFrameworkCore;
@@ -24,13 +26,35 @@ namespace Backend.Services.Impl
             _readerService = readerService;
         }
 
-        public async Task<IEnumerable<LoanResponseDto>> GetAllLoansAsync()
+        public async Task<PagedResult<LoanResponseDto>> GetAllLoansAsync(LoansQueryParameters query)
         {
-            var loans = await _context.Loans
-                                        .Include(l => l.Reader)
-                                        .Include(l => l.Book)
-                                        .ToListAsync();
-            return _mapper.Map<IEnumerable<LoanResponseDto>>(loans);
+            var baseQuery = _context.Loans
+                .OrderByDescending(l => l.LoanDate)
+                .Include(l => l.Reader)
+                .Include(l => l.Book)
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(query.BookTitle))
+            {
+                baseQuery = baseQuery.Where(b => EF.Functions.Like(b.Book.Title, $"%{query.BookTitle}%"));
+            }
+
+            if (!string.IsNullOrEmpty(query.ReaderEmail))
+            {
+                baseQuery = baseQuery.Where(b => EF.Functions.Like(b.Reader.Email, $"%{query.ReaderEmail}%"));
+            }
+
+            var totalItemsCount = await baseQuery.CountAsync();
+
+            var loans = await baseQuery
+                .Skip(query.PageSize * (query.PageNumber - 1))
+                .Take(query.PageSize)
+                .ToListAsync();
+
+            var loansDto = _mapper.Map<List<LoanResponseDto>>(loans);
+            var pagedResult = new PagedResult<LoanResponseDto>(loansDto, totalItemsCount, query.PageNumber, query.PageSize);
+        
+            return pagedResult;
         }
 
         public async Task<LoanResponseDto> GetLoanByIdAsync(int id)

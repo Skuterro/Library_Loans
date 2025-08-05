@@ -5,10 +5,35 @@
     "version": "1.0"
   },
   "paths": {
-    "/Books": {
+    "/api/books": {
       "get": {
         "tags": [
           "Books"
+        ],
+        "parameters": [
+          {
+            "name": "Title",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -16,26 +41,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BookResponseDto"
-                  }
+                  "$ref": "#/components/schemas/BookResponseDtoPagedResult"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BookResponseDto"
-                  }
+                  "$ref": "#/components/schemas/BookResponseDtoPagedResult"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BookResponseDto"
-                  }
+                  "$ref": "#/components/schemas/BookResponseDtoPagedResult"
                 }
               }
             }
@@ -89,7 +105,7 @@
         }
       }
     },
-    "/AvailableBooks": {
+    "/api/books/available": {
       "get": {
         "tags": [
           "Books"
@@ -118,7 +134,7 @@
         }
       }
     },
-    "/Books/{id}": {
+    "/api/books/{id}": {
       "get": {
         "tags": [
           "Books"
@@ -236,10 +252,42 @@
         }
       }
     },
-    "/Loans": {
+    "/api/loans": {
       "get": {
         "tags": [
           "Loans"
+        ],
+        "parameters": [
+          {
+            "name": "ReaderEmail",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "BookTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -247,26 +295,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LoanResponseDto"
-                  }
+                  "$ref": "#/components/schemas/LoanResponseDtoPagedResult"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LoanResponseDto"
-                  }
+                  "$ref": "#/components/schemas/LoanResponseDtoPagedResult"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LoanResponseDto"
-                  }
+                  "$ref": "#/components/schemas/LoanResponseDtoPagedResult"
                 }
               }
             }
@@ -320,7 +359,7 @@
         }
       }
     },
-    "/Loans/{id}": {
+    "/api/loans/{id}": {
       "get": {
         "tags": [
           "Loans"
@@ -360,7 +399,7 @@
         }
       }
     },
-    "/return/{loanId}": {
+    "/api/loans/return/{loanId}": {
       "put": {
         "tags": [
           "Loans"
@@ -400,10 +439,35 @@
         }
       }
     },
-    "/Readers": {
+    "/api/readers": {
       "get": {
         "tags": [
           "Readers"
+        ],
+        "parameters": [
+          {
+            "name": "Email",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -411,26 +475,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ReaderResponseDto"
-                  }
+                  "$ref": "#/components/schemas/ReaderResponseDtoPagedResult"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ReaderResponseDto"
-                  }
+                  "$ref": "#/components/schemas/ReaderResponseDtoPagedResult"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ReaderResponseDto"
-                  }
+                  "$ref": "#/components/schemas/ReaderResponseDtoPagedResult"
                 }
               }
             }
@@ -467,7 +522,7 @@
         }
       }
     },
-    "/Readers/{id}/loans": {
+    "/api/readers/{id}/loans": {
       "get": {
         "tags": [
           "Readers"
@@ -516,56 +571,7 @@
         }
       }
     },
-    "/Readers/{id}/books": {
-      "get": {
-        "tags": [
-          "Readers"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SimpleBookResponseDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SimpleBookResponseDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SimpleBookResponseDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/Readers/{id}": {
+    "/api/readers/{id}": {
       "get": {
         "tags": [
           "Readers"
@@ -739,6 +745,35 @@
         },
         "additionalProperties": false
       },
+      "BookResponseDtoPagedResult": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BookResponseDto"
+            },
+            "nullable": true
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalItems": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "BookUpdateDto": {
         "required": [
           "title"
@@ -791,7 +826,7 @@
             "$ref": "#/components/schemas/SimpleBookResponseDto"
           },
           "loanedBy": {
-            "$ref": "#/components/schemas/SimpleReaderResponseDto"
+            "$ref": "#/components/schemas/ReaderResponseDto"
           },
           "loanDate": {
             "type": "string",
@@ -801,6 +836,35 @@
             "type": "string",
             "format": "date-time",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoanResponseDtoPagedResult": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoanResponseDto"
+            },
+            "nullable": true
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalItems": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -850,6 +914,35 @@
           "email": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReaderResponseDtoPagedResult": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReaderResponseDto"
+            },
+            "nullable": true
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalItems": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

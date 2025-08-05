@@ -1,5 +1,7 @@
 ﻿using Backend.Models.Requests.BookRequests;
 using Backend.Models.Requests.LoanRequests;
+using Backend.Models.Requests.QueryParams;
+using Backend.Models.Responses;
 using Backend.Models.Responses.BookResponses;
 using Backend.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -7,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Backend.Controllers
 {
     [ApiController]
-    [Route("[Controller]")]
+    [Route("api/books")]
     public class BooksController : ControllerBase
     {
         private readonly IBookService _bookService;
@@ -18,13 +20,13 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BookResponseDto>>> GetAllBooks()
+        public async Task<ActionResult<PagedResult<BookResponseDto>>> GetAllBooks([FromQuery] BookQueryParameters query)
         {
-            var books = await _bookService.GetAllBooksAsync();
+            var books = await _bookService.GetAllBooksAsync(query);
             return Ok(books);
         }
 
-        [HttpGet("/AvailableBooks")]
+        [HttpGet("/api/books/available")]
         public async Task<ActionResult<BookResponseDto>> GetAvailableBooks()
         {
             var books = await _bookService.GetAvailableBooksAsync();

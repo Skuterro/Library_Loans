@@ -1,4 +1,6 @@
 ﻿using Backend.Models.Requests.LoanRequests;
+using Backend.Models.Requests.QueryParams;
+using Backend.Models.Responses;
 using Backend.Models.Responses.LoanResponses;
 using Backend.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -6,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Backend.Controllers
 {
     [ApiController]
-    [Route("[Controller]")]
+    [Route("/api/loans")]
     public class LoansController : ControllerBase
     {
         private readonly ILoanService _loanService;
@@ -17,9 +19,9 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<LoanResponseDto>>> GetAllLoans()
+        public async Task<ActionResult<PagedResult<LoanResponseDto>>> GetAllLoans([FromQuery] LoansQueryParameters query)
         {
-            var loans = await _loanService.GetAllLoansAsync();
+            var loans = await _loanService.GetAllLoansAsync(query);
             return Ok(loans);
         }
 
@@ -37,7 +39,7 @@ namespace Backend.Controllers
             return CreatedAtAction(nameof(GetLoanById), new { id = createdLoan.Id}, createdLoan);
         }
 
-        [HttpPut("/return/{loanId}")]
+        [HttpPut("/api/loans/return/{loanId}")]
         public async Task<ActionResult<LoanResponseDto>> ReturnBook([FromRoute] int loanId)
         {
             var returned = await _loanService.ReturnBookAsync(loanId);

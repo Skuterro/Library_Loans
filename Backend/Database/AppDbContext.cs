@@ -18,12 +18,14 @@ namespace Backend.Data
             modelBuilder.Entity<Loan>()
                 .HasOne(l => l.Reader)
                 .WithMany(r => r.Loans)
-                .HasForeignKey(l => l.ReaderId);
+                .HasForeignKey(l => l.ReaderId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Loan>()
                 .HasOne(l => l.Book)
                 .WithMany(b => b.Loans)
-                .HasForeignKey(l => l.BookId);
+                .HasForeignKey(l => l.BookId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Reader>()
                 .HasIndex(client => client.Email)
